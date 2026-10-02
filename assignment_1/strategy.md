@@ -69,7 +69,7 @@ Each bucket is treated as a single synthetic asset (the equal-weighted return of
 
 **Within-bucket weighting:** Conviction-weighted — AA 50%, CENX 25%, NHYDY 25%
 
-> **Note for the group:** All three are primary aluminum producers who directly benefit from price spikes. AA is overweighted because its hydro-powered assets mean it captures the full revenue upside without bearing the full energy cost increase that grid-dependent smelters face. If the group prefers simplicity, equal weight at 33% each is equally defensible — the thesis direction is the same, only the internal emphasis differs.
+> **Note for the group:** All three are primary aluminum producers who directly benefit from price spikes. AA is overweighted because its hydro-powered assets mean it captures the full revenue upside without bearing the full energy cost increase that grid-dependent smelters face. A level split between all three stocks is a perfectly defensible choice as well
 
 ---
 

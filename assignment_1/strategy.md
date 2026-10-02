@@ -120,7 +120,7 @@ US domestic producers benefit because they operate on domestic gas prices, insul
 
 ### 4. Interceptor Restocking (Defense)
 
-**Thesis:** This is explicitly **not** a bet on escalation. Interceptor stores (THAAD rounds, PAC-3 MSE missiles, SM-3s, AMRAAM) have been substantially depleted through transfers to Ukraine and Israel over the preceding years prior to their accelerated use in the current conflict with Iran. These stores **must be replenished regardless of whether the Hormuz situation escalates** — the restocking cycle was already underway. It should be noted that regardless of urgency, the restocking process is expected to take several years. Regardless of whether there are any additional escalations in the Middle East, interceptor restocking is a multi-year project.
+**Thesis:** This is explicitly **not** a bet on escalation. Interceptor stores (THAAD rounds, PAC-3 MSE missiles, SM-3s, AMRAAM) have been substantially depleted through transfers to Ukraine and Israel over the preceding years prior to their accelerated use in the current conflict with Iran. These stores **must be replenished regardless of whether the Hormuz situation escalates** — the restocking cycle was already underway. It should be noted that regardless of urgency, the restocking process is expected to take several years.
 
 The asymmetric trigger structure:
 - **If tensions stay contained:** Normal procurement restocking → multi-year backlog → locked revenue

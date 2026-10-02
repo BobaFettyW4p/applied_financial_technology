@@ -35,7 +35,7 @@ Rather than picking individual stocks and running a single large optimization (w
                             |
     ┌──────────┬──────────┬──────────┬──────────┬──────────┐
  Aluminum    LNG/Gas  Fertilizer  Restock    Tanker
- (4 stocks) (4 stocks) (3 stocks) (3 stocks) (3 stocks)
+ (3 stocks) (4 stocks) (3 stocks) (3 stocks) (3 stocks)
     │            │          │          │          │
   equal wt    equal wt  equal wt  conviction  equal wt
 ```

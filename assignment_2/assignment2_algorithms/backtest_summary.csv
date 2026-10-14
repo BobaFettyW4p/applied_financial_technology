@@ -1,0 +1,8 @@
+strategy,universe,strategy_type,start_date,end_date,starting_equity_usd,ending_equity_usd,total_return_pct,cagr_pct,sharpe_ratio,sortino_ratio,max_drawdown_pct,closed_trades,winning_trades,losing_trades,win_rate_pct,total_orders,total_fees_usd,annual_volatility_pct,source_json,quantconnect_backtest_name
+fro_buy_hold,FRO,buy_hold,2024-01-01,2025-12-31,10000000.0,12254917.65,22.549,10.692,0.271,0.379,52.1,0,0,0,,1,3230.42,37.45,fro_buy_hold_results.json,Hyper Active Light Brown Fly
+fro_long_only,FRO,long_only,2024-01-01,2025-12-31,10000000.0,13812247.31,38.122,17.508,0.501,0.277,21.2,9,6,3,66.67,19,71487.88,17.11,fro_long_only_results.json,Logical Fluorescent Yellow Bison
+fro_long_short,FRO,long_short,2024-01-01,2025-12-31,10000000.0,16531509.74,65.315,28.545,0.725,0.611,34.8,24,16,8,66.67,49,201366.62,24.34,fro_long_short_results.json,Geeky Fluorescent Pink Rabbit
+tankers_buy_hold,FRO/STNG/INSW,buy_hold,2024-01-01,2025-12-31,10000000.0,11156158.12,11.562,5.617,0.125,0.173,53.7,0,0,0,,3,1851.76,29.98,tankers_buy_hold_results.json,Calm Tan Elephant
+tankers_long_only,FRO/STNG/INSW,long_only,2024-01-01,2025-12-31,10000000.0,11051808.15,10.518,5.123,-0.042,-0.029,20.8,27,17,10,62.96,55,35831.93,12.6,tankers_long_only_results.json,Energetic Red Orange Frog
+tankers_long_short,FRO/STNG/INSW,long_short,2024-01-01,2025-12-31,10000000.0,12333139.32,23.331,11.044,0.245,0.236,27.1,68,43,25,63.24,137,98014.64,17.76,tankers_long_short_results.json,Sleepy Tan Leopard
+spy_buy_hold,SPY,buy_hold,2024-01-01,2025-12-31,10000000.0,14769129.38,47.691,21.507,0.791,0.834,18.5,0,0,0,,1,107.88,13.4,spy_buy_hold_results.json,Crying Yellow Green Cow

@@ -1,0 +1,38 @@
+{
+ "G1 regime-only": {
+  "disc": {
+   "sharpe": 0.8394,
+   "ann": 0.2258,
+   "dd": -0.379,
+   "beta": -0.0568
+  },
+  "advance": false
+ },
+ "G2 graded": {
+  "disc": {
+   "sharpe": 1.1357,
+   "ann": 0.307,
+   "dd": -0.2615,
+   "beta": -0.0668
+  },
+  "advance": false
+ },
+ "G3 G2 + momentum tilt": {
+  "disc": {
+   "sharpe": 1.1349,
+   "ann": 0.4068,
+   "dd": -0.4237,
+   "beta": 0.0274
+  },
+  "advance": false
+ },
+ "G4 G2 + mem/hyper spread": {
+  "disc": {
+   "sharpe": 1.3252,
+   "ann": 0.2246,
+   "dd": -0.1662,
+   "beta": -0.0108
+  },
+  "advance": false
+ }
+}

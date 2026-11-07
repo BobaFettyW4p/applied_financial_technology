@@ -1,0 +1,38 @@
+{
+ "N1 50d exit": {
+  "disc": {
+   "sharpe": 0.8101,
+   "ann": 0.3355,
+   "dd": -0.615,
+   "beta": 0.1241
+  },
+  "advance": false
+ },
+ "N2 vol-targeted": {
+  "disc": {
+   "sharpe": 0.8175,
+   "ann": 0.1281,
+   "dd": -0.2428,
+   "beta": 0.0453
+  },
+  "advance": false
+ },
+ "N3 confirmation": {
+  "disc": {
+   "sharpe": 0.0938,
+   "ann": 0.0243,
+   "dd": -0.4098,
+   "beta": 0.046
+  },
+  "advance": false
+ },
+ "N4 N3 vol-targeted": {
+  "disc": {
+   "sharpe": 0.1884,
+   "ann": 0.0208,
+   "dd": -0.1749,
+   "beta": 0.0164
+  },
+  "advance": false
+ }
+}

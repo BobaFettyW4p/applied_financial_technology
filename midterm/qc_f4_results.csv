@@ -1,0 +1,6 @@
+run,file,start,end,cagr_pct,sharpe,sortino,max_dd_pct,beta,alpha,ann_sd,info_ratio,psr_pct,orders,fees,spy_cagr_pct
+Q1 default,Calculating Light Brown Cormorant.json,2022-11-22,2026-08-09,25.721,0.985,1.191,15.7,0.109,0.124,0.137,0.182,38.737,2635,4940.38,21.5
+Q2 slippage 10bps,Square Sky Blue Flamingo.json,2022-11-22,2026-08-09,23.318,0.868,1.045,16.1,0.11,0.108,0.138,0.095,30.28,2636,4856.22,21.5
+Q3 band 1%,Crawling Green Crocodile.json,2022-11-22,2026-08-09,24.138,0.913,1.09,15.8,0.103,0.114,0.136,0.123,33.48,3348,5612.33,21.5
+Q4 first half,Fat Yellow Green Hippopotamus.json,2022-11-22,2024-06-30,21.262,0.874,1.292,9.9,0.563,0.036,0.111,-0.117,36.872,944,2530.54,24.3
+Q5 second half,Smooth Orange Owlet.json,2024-07-01,2026-08-09,29.147,1.065,1.22,15.7,-0.095,0.173,0.154,0.307,45.978,1742,2172.93,19.5

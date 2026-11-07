@@ -1,0 +1,38 @@
+{
+ "C1 score-weighted": {
+  "disc": {
+   "sharpe": 0.5625,
+   "ann": 0.2035,
+   "dd": -0.6329,
+   "beta": 0.1884
+  },
+  "advance": false
+ },
+ "C2 top6/bottom6": {
+  "disc": {
+   "sharpe": 0.2587,
+   "ann": 0.082,
+   "dd": -0.6167,
+   "beta": 0.1466
+  },
+  "advance": false
+ },
+ "C3 C1+N2 combo": {
+  "disc": {
+   "sharpe": 0.7105,
+   "ann": 0.1658,
+   "dd": -0.4099,
+   "beta": 0.1168
+  },
+  "advance": false
+ },
+ "C4 C1 vol-targeted": {
+  "disc": {
+   "sharpe": 0.4946,
+   "ann": 0.0788,
+   "dd": -0.3559,
+   "beta": 0.0892
+  },
+  "advance": false
+ }
+}

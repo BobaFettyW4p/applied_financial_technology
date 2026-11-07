@@ -1,0 +1,56 @@
+{
+ "L1 trend sign": {
+  "disc": {
+   "sharpe": 0.2627,
+   "ann": 0.0708,
+   "dd": -0.5408,
+   "beta": 0.0781
+  },
+  "advance": false
+ },
+ "L2 rel momentum": {
+  "disc": {
+   "sharpe": 0.5789,
+   "ann": 0.202,
+   "dd": -0.4763,
+   "beta": 0.1002
+  },
+  "advance": false
+ },
+ "L3 theme-neutral": {
+  "disc": {
+   "sharpe": -0.5911,
+   "ann": -0.1072,
+   "dd": -0.5706,
+   "beta": 0.0233
+  },
+  "advance": false
+ },
+ "L4 infra fade": {
+  "disc": {
+   "sharpe": 0.45,
+   "ann": 0.1733,
+   "dd": -0.4394,
+   "beta": -0.0334
+  },
+  "advance": false
+ },
+ "L5 hyper-lead": {
+  "disc": {
+   "sharpe": -0.0354,
+   "ann": -0.0099,
+   "dd": -0.6548,
+   "beta": 0.0152
+  },
+  "advance": false
+ },
+ "L6 combo L2+L4+L5": {
+  "disc": {
+   "sharpe": 0.6613,
+   "ann": 0.1218,
+   "dd": -0.3183,
+   "beta": 0.0273
+  },
+  "advance": false
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "disc": {
+  "storage_hw": {
+   "n_names": 4,
+   "s_sharpe": 0.6758,
+   "bh_sharpe": 0.5159,
+   "spy_sharpe": 0.837,
+   "s_cagr": 0.1426,
+   "bh_cagr": 0.1183,
+   "s_dd": -0.365,
+   "bh_dd": -0.5226
+  },
+  "semi_equip": {
+   "n_names": 6,
+   "s_sharpe": 0.7821,
+   "bh_sharpe": 0.9292,
+   "spy_sharpe": 0.837,
+   "s_cagr": 0.1785,
+   "bh_cagr": 0.27,
+   "s_dd": -0.3724,
+   "bh_dd": -0.4272
+  },
+  "ai_chips": {
+   "n_names": 5,
+   "s_sharpe": 0.8986,
+   "bh_sharpe": 1.0122,
+   "spy_sharpe": 0.837,
+   "s_cagr": 0.2194,
+   "bh_cagr": 0.3146,
+   "s_dd": -0.3715,
+   "bh_dd": -0.5444
+  },
+  "other_semis": {
+   "n_names": 8,
+   "s_sharpe": 0.754,
+   "bh_sharpe": 0.8527,
+   "spy_sharpe": 0.837,
+   "s_cagr": 0.1529,
+   "bh_cagr": 0.2191,
+   "s_dd": -0.3833,
+   "bh_dd": -0.3934
+  },
+  "power_dc": {
+   "n_names": 4,
+   "s_sharpe": 0.6521,
+   "bh_sharpe": 0.5427,
+   "spy_sharpe": 0.837,
+   "s_cagr": 0.12,
+   "bh_cagr": 0.1158,
+   "s_dd": -0.3544,
+   "bh_dd": -0.586
+  },
+  "cloud_bigtech": {
+   "n_names": 4,
+   "s_sharpe": 0.8637,
+   "bh_sharpe": 1.0691,
+   "spy_sharpe": 0.837,
+   "s_cagr": 0.1641,
+   "bh_cagr": 0.2329,
+   "s_dd": -0.3432,
+   "bh_dd": -0.259
+  },
+  "memory_ref": {
+   "n_names": 3,
+   "s_sharpe": 0.9182,
+   "bh_sharpe": 0.7006,
+   "spy_sharpe": 0.837,
+   "s_cagr": 0.2354,
+   "bh_cagr": 0.2102,
+   "s_dd": -0.4058,
+   "bh_dd": -0.6848
+  }
+ },
+ "hold": {
+  "storage_hw": {
+   "n_names": 4,
+   "s_sharpe": 1.1933,
+   "bh_sharpe": 1.2239,
+   "spy_sharpe": 0.8875,
+   "s_cagr": 0.4123,
+   "bh_cagr": 0.5214,
+   "s_dd": -0.3233,
+   "bh_dd": -0.4562
+  },
+  "semi_equip": {
+   "n_names": 7,
+   "s_sharpe": 0.7151,
+   "bh_sharpe": 0.7497,
+   "spy_sharpe": 0.8875,
+   "s_cagr": 0.2122,
+   "bh_cagr": 0.271,
+   "s_dd": -0.4389,
+   "bh_dd": -0.506
+  },
+  "ai_chips": {
+   "n_names": 5,
+   "s_sharpe": 1.0264,
+   "bh_sharpe": 1.1859,
+   "spy_sharpe": 0.8875,
+   "s_cagr": 0.3312,
+   "bh_cagr": 0.5087,
+   "s_dd": -0.4171,
+   "bh_dd": -0.5166
+  },
+  "other_semis": {
+   "n_names": 8,
+   "s_sharpe": 0.4578,
+   "bh_sharpe": 0.6165,
+   "spy_sharpe": 0.8875,
+   "s_cagr": 0.094,
+   "bh_cagr": 0.174,
+   "s_dd": -0.3619,
+   "bh_dd": -0.4457
+  },
+  "power_dc": {
+   "n_names": 6,
+   "s_sharpe": 1.1856,
+   "bh_sharpe": 1.2221,
+   "spy_sharpe": 0.8875,
+   "s_cagr": 0.3466,
+   "bh_cagr": 0.4488,
+   "s_dd": -0.3782,
+   "bh_dd": -0.4335
+  },
+  "cloud_bigtech": {
+   "n_names": 4,
+   "s_sharpe": 0.7802,
+   "bh_sharpe": 0.7783,
+   "spy_sharpe": 0.8875,
+   "s_cagr": 0.1558,
+   "bh_cagr": 0.1842,
+   "s_dd": -0.3541,
+   "bh_dd": -0.3803
+  },
+  "memory_ref": {
+   "n_names": 3,
+   "s_sharpe": 1.2983,
+   "bh_sharpe": 1.2098,
+   "spy_sharpe": 0.8875,
+   "s_cagr": 0.541,
+   "bh_cagr": 0.5694,
+   "s_dd": -0.4635,
+   "bh_dd": -0.5189
+  }
+ }
+}

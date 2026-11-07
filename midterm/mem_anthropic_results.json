@@ -1,0 +1,86 @@
+{
+ "DISC|S1 slot trend": {
+  "sharpe": 1.0729,
+  "cagr": 0.2154,
+  "dd": -0.3571,
+  "beta": 1.0743,
+  "stock_share": 0.692
+ },
+ "DISC|S2 score weight": {
+  "sharpe": 1.1033,
+  "cagr": 0.2229,
+  "dd": -0.3488,
+  "beta": 1.0802,
+  "stock_share": 0.696
+ },
+ "DISC|S3 top8 momentum": {
+  "sharpe": 1.2705,
+  "cagr": 0.3297,
+  "dd": -0.355,
+  "beta": 1.1782,
+  "stock_share": 0.948
+ },
+ "DISC|S4 memory tilt 2x": {
+  "sharpe": 1.0773,
+  "cagr": 0.2205,
+  "dd": -0.3598,
+  "beta": 1.0828,
+  "stock_share": 0.68
+ },
+ "DISC|S5 memory regime": {
+  "sharpe": 1.1117,
+  "cagr": 0.2475,
+  "dd": -0.3684,
+  "beta": 1.0921,
+  "stock_share": 0.638
+ },
+ "DISC|S6 memory-led top8": {
+  "sharpe": 1.23,
+  "cagr": 0.3215,
+  "dd": -0.355,
+  "beta": 1.1923,
+  "stock_share": 0.948
+ },
+ "HOLD|S1 slot trend": {
+  "sharpe": 1.3326,
+  "cagr": 0.3177,
+  "dd": -0.3254,
+  "beta": 1.2044,
+  "stock_share": 0.615
+ },
+ "HOLD|S2 score weight": {
+  "sharpe": 1.2804,
+  "cagr": 0.3014,
+  "dd": -0.328,
+  "beta": 1.2115,
+  "stock_share": 0.623
+ },
+ "HOLD|S3 top8 momentum": {
+  "sharpe": 1.291,
+  "cagr": 0.4755,
+  "dd": -0.4499,
+  "beta": 1.4782,
+  "stock_share": 0.898
+ },
+ "HOLD|S4 memory tilt 2x": {
+  "sharpe": 1.3985,
+  "cagr": 0.357,
+  "dd": -0.3274,
+  "beta": 1.2238,
+  "stock_share": 0.619
+ },
+ "HOLD|S5 memory regime": {
+  "sharpe": 1.1415,
+  "cagr": 0.375,
+  "dd": -0.3777,
+  "beta": 1.3559,
+  "stock_share": 0.635
+ },
+ "HOLD|S6 memory-led top8": {
+  "sharpe": 1.3348,
+  "cagr": 0.4961,
+  "dd": -0.4351,
+  "beta": 1.4643,
+  "stock_share": 0.898
+ }
+}

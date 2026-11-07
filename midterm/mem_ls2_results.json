@@ -1,0 +1,38 @@
+{
+ "M1 mem-vs-hyper spread": {
+  "disc": {
+   "sharpe": 0.8267,
+   "ann": 0.3424,
+   "dd": -0.6475,
+   "beta": 0.0944
+  },
+  "advance": false
+ },
+ "M2 confluence L/S": {
+  "disc": {
+   "sharpe": 0.0043,
+   "ann": 0.0013,
+   "dd": -0.6867,
+   "beta": 0.0967
+  },
+  "advance": false
+ },
+ "M3 combo M1+M2": {
+  "disc": {
+   "sharpe": 0.5395,
+   "ann": 0.1719,
+   "dd": -0.5199,
+   "beta": 0.0956
+  },
+  "advance": false
+ },
+ "M4 control invvol L2": {
+  "disc": {
+   "sharpe": 0.5621,
+   "ann": 0.1891,
+   "dd": -0.4725,
+   "beta": 0.0955
+  },
+  "advance": false
+ }
+}

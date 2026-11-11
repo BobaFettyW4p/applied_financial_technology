@@ -1,133 +1,169 @@
-# Midterm — Video Script
-## F4: Trading the AI Ecosystem Long and Short
+# Situational Humility: video narration script
 
-**Format:** 3–7 minute screen capture, face in corner, slides as the main visual (about 6 minutes at a normal pace; the "Disclosures" slide can be shortened if time is tight)
-**Live demo:** QuantConnect run Q1 (default settings) shown at slide 9
-**Strategy file:** `midterm/algorithms/f4_regime_spread.py`
-**Presenter:** [name]
+**Deck:** `Situational_Humility_deck_final.pptx`, all 23 slides in order (none hidden). **Strategy file:** `algo/main.py`.
+**Target:** under 15 minutes (the assignment allows 8-15). Timing is estimated from word counts at about 140 words a minute; see the table at the end.
 
-> **Before recording:** re-run the positioning check (it changes daily) and update slide 11. The numbers on slides 8-10 come from QuantConnect results and do not change. Positioning figures below are as of Friday, Nov 6, 2026 close, computed offline with Yahoo prices, not a QuantConnect live run.
-
----
-
-## Slide 1 — Title
-*"F4: Trading the AI Ecosystem, Long and Short"*
-
-> Our midterm strategy trades the companies around the AI build-out. It's always invested in single stocks, it can go short when the trend turns, and right now the AI group is in a sharp sell-off, so we can show how it's positioned.
+How to read this script:
+- Lines starting with `>` are spoken. Everything else is a note to the presenter.
+- Numbers in **[square brackets]** change with the market. They are set to the Tuesday 10 November close; if you record after another close, refresh them with `python src/today.py` (they must match slide 13).
+- Stage directions are in *italics*.
 
 ---
 
-## Slide 2 — The thesis, in one sentence
-*"AI demand flows through a chain: customers → clouds → chips → memory → data centers. The chain moves together, but not at the same speed."*
+## Slide 1: Title
 
-> ChatGPT launched on November 22, 2022. That's our start date, because that's when this trade began. Our thesis is that AI spending ripples through a supply chain, and the stocks in that chain are connected: when one part of it moves, the others tend to follow, and the strength of the memory names relative to the buyers tells us where the cycle is.
+> Hi, I'm Tom Dickson, presenting for our group with Charlotte Roth and Matthew Ivancic. Our strategy is called Situational Humility. It trades the companies around the AI build-out, and the idea fits in one line: awareness tells you what is happening; humility sizes the bet. It's always invested in single stocks, it can go short when the trend turns, and the AI group has just been through a sharp sell-off, so we can show you how it's positioned today.
+
+## Slide 2: Motivation
+
+> Big IPOs move the companies around them. Hsu, Reed and Rocholl studied 134 large IPOs from 1980 to 2001, and found that listed rivals lost about 0.8 percent around the IPO, because a newly public competitor is stronger and better funded. That paper is about rivals, not suppliers, so it told us where to look, not what to bet. Anthropic's IPO made us ask which public companies are tied to it, and whether those links create trading opportunities.
+
+## Slide 3: The chain
+
+> We focused on the supply chain, where the links are strongest. Customers buy AI models like Claude, which run on the big clouds, which buy chips, memory and data-center capacity. Our thesis: AI spending ripples through this chain, so these stocks move together, and memory's strength against the buyers tells us where the cycle is. Our backtests start on November 22, 2022, the week before ChatGPT launched, so they cover the whole AI trade. The question: which parts of the chain lead, and which break first?
+
+## Slide 4: Anthropic's S-1
+
+> We built the list of stocks from Anthropic's S-1 filing. Claude is sold through all three major clouds: AWS, Google Cloud and Azure. It's trained and served on four chip families: Amazon's Trainium, Google's TPUs, and NVIDIA and AMD GPUs, and Broadcom is a named supplier. And the S-1 says customer demand exceeds available compute. Compute is the bottleneck, so the suppliers of compute are where we look.
+
+## Slide 5: Eighteen stocks
+
+> That gives us eighteen stocks in four groups. The hyperscalers, the buyers of compute: Amazon, Google, Microsoft, Meta, Oracle and IBM. The chips: NVIDIA, Broadcom and AMD. Memory, our core idea: Micron, Western Digital, Seagate and SanDisk. And infrastructure: Dell, Arista, Vertiv, Equinix and Constellation. One thing up front: we chose these names knowing how the AI story played out, so the list has hindsight built in. We'll come back to that, and test it.
+
+## Slide 6: Two sleeves
+
+> Situational Humility runs two strategies side by side, with half the capital each. The first is a regime signal: is the AI basket trending up or down? The second bets on a relationship: memory against the cloud buyers. Everything is in single stocks. The only SPY position is a hedge that cancels the market exposure of the second sleeve.
+
+## Slide 7: Regime sleeve
+
+> The regime sleeve builds an equal-weight index of the 18 stocks and asks three yes-or-no questions. Is the basket above its 50-day average? Above its 100-day average? And are more than half the stocks above their own 50-day averages? Three yeses: fully net long. Three noes: fully net short. One or two yeses give a partial position. So it usually moves one step at a time, though one sharp day can flip all three tests at once.
+
+## Slide 8: Spread sleeve
+
+> The spread sleeve compares a memory basket with a hyperscaler basket. When memory is beating the hyperscalers, meaning this ratio is above its 100-day average, we go long memory and short the hyperscalers. Below the average, we reverse. Memory is the part of the chain most sensitive to AI spending. The sleeve is sized to a 15 percent volatility target, so it shrinks when the spread gets wild, and the SPY hedge cancels its market exposure. It's a bet on the relationship, not the market. Notice the ratio fell below its average this autumn.
+
+## Slide 9: What we tried
+
+> Before settling on this, we tested about 80 ideas, and most of them failed. Ranking stocks by momentum, long the winners and short the losers, lost 16 to 30 percent in the 2022 bear market. Betting that the hyperscalers lead the chip stocks by two days lost 37 percent in 2021, and again in 2022. Holding the basket only overnight looked great, until it lost 38 percent in 2022. Situational Humility survived because it combines two signals that worked in different periods, and it's built to lose less when the group falls.
+
+## Slide 10: Result
+
+> Here's the QuantConnect backtest, from November 22, 2022 to August 7, 2026, with default fees. Situational Humility returned 25.7 percent a year, against 21.5 for SPY. That's a modest edge, not a large one. Its worst drawdown was 15.7 percent, and its beta to the market was 0.11, so it isn't just riding the market. Adding 10 basis points of slippage on every trade cuts the return to 23.3 percent.
+
+## Slide 11: Live demo
+
+*Before you start recording: open the finished QuantConnect backtest Q1 in your browser (default settings, 22 Nov 2022 to 7 Aug 2026: 25.7% a year, 2,635 orders), let every chart load, and click the browser and then Keynote, so the browser is the last app you used. Don't start a new backtest.*
+
+*On this slide, press H to hide the slideshow and jump to the browser. Point at three things, in this order: the equity curve against SPY, the statistics (drawdown 15.7%, beta 0.11, 2,635 orders), and the exposure chart (long and short exposure over time).*
+
+> Let's look at the run itself. Here's the equity curve against SPY, and here are the statistics: the 15.7 percent drawdown and the beta of 0.11. The run placed 2,635 orders in about four years, because it checks every day, five minutes before the close, and trades when a position drifts more than 2 percent from target. And this is the exposure chart: net long most of the time, with the short side kicking in during sell-offs, which is what the regime sleeve is built to do.
+
+*Click Keynote in the Dock to return to the slideshow, then advance to slide 12.*
+
+## Slide 12: Two halves
+
+> We also split the QuantConnect window in half. The first half returned 21 percent a year with a drawdown under 10 percent, a little behind SPY's 24. The second half returned 29 percent, well ahead of SPY's 19.5. And four years is short: the Sharpe ratio's error band is about plus or minus 0.6.
+
+*The slide's cost card (10 bps of slippage trims 2.4 points) and the probabilistic Sharpe of 39% are spoken on slides 10 and 20, so they aren't repeated here.*
+
+## Slide 13: Today
+
+*Values as of the Tuesday 10 November close, which is what slide 13 shows in the final deck. If you record after another close, rerun `python src/today.py` and update slide 13 and the bracketed numbers together.*
+
+> So where is it right now? Last week the AI group sold off hard: on **[Thursday]** the basket fell **[10]** percent and the memory names **[18]**. It bounced about **[8]** percent over **[Friday and Monday]**, then slipped **[1.1]** percent on **[Tuesday]**. At **[Tuesday's]** close the basket is still **[12 to 13]** percent below its 50- and 100-day averages, so all three tests are still bearish. The strategy is net short about **[half]** its capital, with memory the most short, and a **[25]** percent SPY position offsetting part of the market risk. These are offline numbers from Yahoo prices, not a live QuantConnect run.
+
+*The slide's two session cards are the last two sessions (Mon 9 Nov: basket +5.8%, memory +8.0%; Tue 10 Nov: basket -1.1%, memory -1.3%). Thursday's fall and Friday's +2.3% are spoken context.*
+
+## Slide 14: The risk
+
+> We should be honest about the risk. Since 2012, all three signals turned bearish together 58 times. Usually the group rebounded: the average return over the next 20 days was plus 3.4 percent, the median plus 4.5, and only about a quarter of the time did it keep falling. So being short here is a bet that the fall continues, and the main danger is a sharp bounce. That's why the net short is capped at half the capital, the spread shrinks when volatility rises, and SPY offsets part of the market risk.
+
+## Slide 15: Test 1, random baskets
+
+> Now the part where we tried to break it. These tests use our own offline engine, so every alternative runs the same way; on QuantConnect's dates it gives 25.0 percent a year, against 25.7. First question: is it the rules, or the names? We ran the same rules on 500 random baskets of tech and communication stocks, with the same structure, costs and dates. The typical basket loses money: the median Sharpe ratio, which is return per unit of risk, is minus 0.39, and the median return about minus 6 percent a year, while stocks went up. Our 18 names score 1.43, above all 500. So it beats luck, but read it the other way too: the rules have no edge on their own. The result depends on these names, picked with hindsight.
+
+## Slide 16: Test 2, before the AI boom
+
+> Second test: before the AI boom. We ran the strategy unchanged on 2016 to 2019. It returned 5.1 percent a year against 14.7 for SPY, a Sharpe of 0.44 against 1.13, with a worse drawdown. But look at 2018: SPY fell 4.6 percent and Situational Humility gained 12.8. Then in 2019 it gave it all back, minus 18.7 percent while SPY rose 31. We haven't split that loss between the sleeves, so we don't claim to know why. Two of our three pre-set pass rules passed: a partial verdict. And the names are still hindsight picks, so this is out of cycle, not out of sample.
+
+## Slide 17: Test 3, a one-line trend switch
+
+> The third test surprised us most. Drop all the machinery, and just hold the same 18 stocks equally while their basket is above its 100-day average, and cash otherwise. That one-line rule has a higher Sharpe than Situational Humility in the AI era, 1.87 against 1.43, and in 2016 to 2019, 1.28 against 0.44, with a third of the trading. It also cuts the worst drawdown from 32 percent for always holding to 21. To be fair, the switch is long-only and carries market risk, while our strategy is hedged and can go short. So the honest reading: Situational Humility doesn't add risk-adjusted return over a trend filter; it trades return for low market exposure. And just holding the names earned the most, because they are hindsight winners.
+
+## Slide 18: Test 4, sell-offs and rebounds
+
+> This is the claim that matters most: does it protect when the AI group falls? Mostly, yes. In the 2018 sell-off it made 6.9 percent while SPY lost 6.1. Over 2020 and 2021, including COVID, its worst drawdown was 18.5 percent against 33.7 for SPY. In the AI era its worst drawdown, 15.1, is the shallowest here, against 31.9 for holding the stocks. The trend switch gets part of this protection, but it can't go net short, as Situational Humility did a week after the 2018 memory peak. The cost is the last row, the 2019 rebound we just saw. Only the 2018 sell-off against SPY was a pre-registered test; the rest is descriptive, so treat it as evidence, not proof.
+
+## Slide 19: What did not help
+
+> We also tried to turn our regime-change hunch into a signal. These 18 stocks grew from about 10 percent of S&P 500 market cap in early 2016 to about 31 percent now. We tested two signals, each set up in advance and run once. First, share of trading volume didn't predict the next 20 days beyond the price trend, and it flagged only 2 of 11 big declines, against 10 of 11 for a plain 100-day price switch. Second, market-cap share as a veto on the trend switch passed 2 of 6 rules, so we left the strategy unchanged. Market-cap share mostly moves with price: it shows how big the AI trade became, but it isn't a better signal.
+
+*About the caption: its "correlation about 0.6 with relative return" was measured for market-cap share (EXP-007). Volume share, counted in shares, actually moved opposite to price (EXP-006). The narration ties the price link to market-cap share only; keep it that way if you ad-lib.*
+
+## Slide 20: Before you trust it
+
+> Before you trust any of this, five things. One: the stocks were chosen with hindsight. Two: we tried about 80 rule variations on this data, so some of the result is luck; QuantConnect's probabilistic Sharpe is only 39 percent. Three: the 50- and 100-day windows were chosen after seeing 2022. Four: before the AI era it earned far less than SPY, about 4 percent a year from 2011 to 2022 against 12, in our offline test. And five, not on the slide: it failed our own pre-declared rule, a positive 2022. We show it because it's the best protection we found, not because it passed every test.
+
+## Slide 21: Why not the alternatives
+
+> Why this strategy and not the alternatives? We also built a long-only version that holds the stocks when the trend is up and SPY otherwise. It returned 63 percent a year, but with a beta of 1.4 it's the AI trade, not a hedge. A pure memory basket returned even more, with a 44 percent drawdown. In 2022, before our window, those two lost 23 and 28 percent; Situational Humility lost about 6. With the group already falling, we chose the one built to be short and hedged.
+
+## Slide 22: Close
+
+> To sum up: Situational Humility is a long/short bet on the AI supply chain, sized to survive being wrong. It's net short about half its capital right now, with memory the most short. It earned about 26 percent a year in the backtest, with a 16 percent worst drawdown, and we've shown you where it's weak. If the sell-off continues, it's positioned for it. A sharp rebound in the next few weeks is the main risk, and the hedge and the position limits are there to contain the damage.
+
+## Slide 23: Backup, the five QuantConnect runs
+
+> For reference, this last slide lists all five QuantConnect runs. Extra slippage or a tighter trading band cost between 1.6 and 2.4 points a year, and both halves of the window made money. Thanks for watching.
+
+*Backup slide, kept for this recording. If you drop it later, move "Thanks for watching" back to the end of slide 22.*
 
 ---
 
-## Slide 3 — Where we found the chain: Anthropic's S-1
-*Visual: three quotes from the S-1, with the company names highlighted*
+## Timing (about 140 words a minute)
 
-> We built the universe from Anthropic's S-1. Claude runs on all three major clouds: AWS, Google Cloud and Azure. It trains and serves on four chip families: Amazon's Trainium, Google's TPUs, NVIDIA and AMD GPUs. It buys from Broadcom, and it relies on data-center partners. The S-1 also says customer demand exceeds available compute. Compute is the bottleneck, so the suppliers of compute are where we look.
+| Slide | Words | Time at 140 wpm | Running total |
+|---|---|---|---|
+| Slide 1: Title | 79 | 0:34 | 0:34 |
+| Slide 2: Motivation | 78 | 0:33 | 1:07 |
+| Slide 3: The chain | 86 | 0:37 | 1:44 |
+| Slide 4: Anthropic's S-1 | 68 | 0:29 | 2:13 |
+| Slide 5: Eighteen stocks | 75 | 0:32 | 2:45 |
+| Slide 6: Two sleeves | 59 | 0:25 | 3:11 |
+| Slide 7: Regime sleeve | 77 | 0:33 | 3:44 |
+| Slide 8: Spread sleeve | 94 | 0:40 | 4:24 |
+| Slide 9: What we tried | 92 | 0:39 | 5:03 |
+| Slide 10: Result | 70 | 0:30 | 5:33 |
+| Slide 11: Live demo | 87 | 0:37 | 6:11 |
+| Slide 12: Two halves | 54 | 0:23 | 6:34 |
+| Slide 13: Today | 103 | 0:44 | 7:18 |
+| Slide 14: The risk | 93 | 0:40 | 7:58 |
+| Slide 15: Test 1, random baskets | 133 | 0:57 | 8:55 |
+| Slide 16: Test 2, before the AI boom | 106 | 0:45 | 9:40 |
+| Slide 17: Test 3, a one-line trend switch | 128 | 0:55 | 10:35 |
+| Slide 18: Test 4, sell-offs and rebounds | 121 | 0:52 | 11:27 |
+| Slide 19: What did not help | 119 | 0:51 | 12:18 |
+| Slide 20: Before you trust it | 107 | 0:46 | 13:04 |
+| Slide 21: Why not the alternatives | 88 | 0:38 | 13:42 |
+| Slide 22: Close | 89 | 0:38 | 14:20 |
+| Slide 23: Backup, the five QuantConnect runs | 36 | 0:15 | 14:35 |
+| **Total (23 slides)** | **2042** | **14:35** | |
 
----
+Word counts cover the spoken lines only (lines starting with `>`); headings and stage directions are excluded.
+- **Pace:** the same 2,042 words take about 15:42 at 130 words a minute and 13:37 at 150.
+- **Numbers:** the script has 133 of them, and numbers take longer to say than ordinary words. Counting each as about 2.5 spoken words gives about 16:00 at 140.
+- **Live demo:** switching to QuantConnect and back on slide 11 adds roughly 10-20 seconds.
 
-## Slide 4 — The 18 stocks
-*Visual: four colored groups*
+So a careful, slow read could run past 15 minutes. Time your first take.
 
-> Eighteen names in four groups. Hyperscalers, the buyers: Amazon, Google, Microsoft, Meta, Oracle, IBM. Chips: NVIDIA, Broadcom, AMD. Memory, our core idea: Micron, Western Digital, Seagate, SanDisk. And infrastructure: Dell, Arista, Vertiv, Equinix, Constellation. We chose these knowing how the story played out, so we'll be upfront that the list has hindsight in it.
+**If the first take runs over about 14:45**, make these cuts, in order. Each one removes only words, so nothing else needs rewording.
 
----
+| # | Slide | Cut this | Saves |
+|---|---|---|---|
+| 1 | 13 | "These are offline numbers from Yahoo prices, not a live QuantConnect run." (the slide's source line says it) | ~5 s |
+| 2 | 17 | "And just holding the names earned the most, because they are hindsight winners." | ~6 s |
+| 3 | 19 | ", and it flagged only 2 of 11 big declines, against 10 of 11 for a plain 100-day price switch" (end the sentence at "price trend.") | ~8 s |
+| 4 | 9 | "Betting that the hyperscalers lead the chip stocks by two days lost 37 percent in 2021, and again in 2022." (the table shows it) | ~9 s |
+| 5 | 23 | All of slide 23's narration. Click through it silently, and move "Thanks for watching." to the end of slide 22. | ~15 s |
 
-## Slide 5 — The first sleeve: a regime signal
-*Visual: three icons, one for each test, with a dial going from "net short" to "net long"*
-
-> Half the capital runs on a regime signal. We build an equal-weight index of the 18 stocks and ask three questions. Is it above its 50-day average? Above its 100-day average? And are more than half of the stocks above their own 50-day averages? All three yes, we're fully net long the basket. All three no, we're fully net short. In between, we scale down gradually, so it never flips all at once.
-
----
-
-## Slide 6 — The second sleeve: memory versus the buyers
-*Visual: ratio chart of the memory basket divided by the hyperscaler basket, with the 100-day average*
-
-> The other half bets on a relationship. When memory stocks are outperforming the hyperscalers and the trend is up, we go long memory and short the hyperscalers. When the trend turns, we reverse. That's because memory is the most sensitive part of the chain to AI capital spending. We size it to a 15% volatility target so it can't dominate, and use a small SPY position to cancel its market exposure.
-
----
-
-## Slide 7 — How we got here, including what failed
-*Visual: a table of what we tried, with a red cross for each failed idea*
-
-> We started with about 80 rule variations and kept a record of every one. Momentum rankings lost money in the 2022 bear. A rule that bets the hyperscalers lead the chip stocks by two days lost 37% in a year. Shorting the group when it's weak turned out to cost us more than simply moving to SPY. F4 survived because it combines two things that worked in different periods, a regime signal and the memory relationship, and it's built to lose less when the group falls.
-
----
-
-## Slide 8 — The QuantConnect result
-*Visual: equity curve of F4 against SPY, Q1*
-
-> Running from the ChatGPT launch through August 2026, F4 returned 25.7% a year against 21.5% for SPY, a modest edge, not a large one. Its worst drawdown was 15.7%. Its beta to the market was 0.11, so it isn't just riding the market. Adding 10 basis points of slippage on every trade cut that to 23.3%.
-
----
-
-## Slide 9 — LIVE DEMO: QuantConnect
-*Show the Q1 backtest: equity curve, statistics, and the long/short exposure chart*
-
-> Here's the live backtest. You can see the equity curve, 2,635 orders over about four years, and the exposure chart showing the days we're net short. It's mostly long, with the short side kicking in during sell-offs.
-
----
-
-## Slide 10 — Does it hold up? Two halves
-*Visual: two small tables, first half and second half*
-
-> We split the window in half. The first half returned 21% a year with a drawdown under 10%, a little behind SPY's 24% because the strategy was mostly hedged while the group ran. The second half returned 29% with a 15.7% drawdown, well ahead of SPY's 19.5%. We were careful here: a four-year window is short, and a Sharpe over four years carries a lot of statistical noise.
-
----
-
-## Slide 11 — Where is F4 right now?
-*Visual: the current positions table, with the net exposure highlighted*
-
-> This week the group fell to about 17% below its recent trend, with the worst day on Thursday, down 10% for the basket and 18% for the memory names. All three of F4's signals are now bearish. As of Friday's close the strategy is net short about 50% of capital across the 18 names, with the memory stocks most short, and a 24% SPY position offsetting part of the market risk. It's positioned for the decline to continue.
-
----
-
-## Slide 12 — What could go wrong
-*Visual: a histogram of next-20-day returns after all three signals turned bearish*
-
-> We should be honest about the risk. We looked at every time all three signals turned bearish together. In most cases the group rebounded. The average next-20-day return was positive, about 3%, and only a quarter of the time did the group keep falling. So this is a bet on continuation, and the main danger is a sharp bounce. That's the reason the short side is capped by the volatility target and hedged with SPY.
-
----
-
-## Slide 13 — Disclosures
-*Visual: a list of five short bullet points*
-
-> Five things you should know. One: the stocks were chosen with hindsight. Two: about 87 rule variations were tested on this data, so some of the result will be luck, and QuantConnect's probabilistic Sharpe is only 39%, so we can't be confident it's skill. Three: the regime windows were tuned after seeing 2022. Four: before the AI era, the same approach earned much less than SPY, about 4% a year against 12% in our offline test. Five: F4 failed our own pre-declared test, because it had to make money in 2022 and it didn't. We're showing it because it's the best protection we found, not because it passed every test.
-
----
-
-## Slide 14 — Why F4 and not the alternatives
-*Visual: a three-column comparison, F4 / gated AI basket / memory basket*
-
-> We also built a long-only version that holds the stocks when the trend is up and SPY otherwise. It returned 63% a year, but with a beta of 1.4, so it's the AI trade, not a hedge. The old memory basket returned more still, but with a 44% drawdown. We chose F4 because, with the group already in a downtrend, we want the strategy that is built to be short and hedged, and the one that gave up the least in a bear.
-
----
-
-## Slide 15 — Close
-*"A long/short bet on the AI chain, sized to survive being wrong."*
-
-> F4 is a long/short strategy on the AI ecosystem. It's net short right now. It earned about 26% a year in the backtest with a shallow drawdown, and we've told you where it's weak. If the sell-off continues, it's positioned for it. If the group rebounds, the volatility target and the hedge are there to limit the damage.
-
----
-
-## If asked (Q&A cheat sheet)
-
-* **"Why not just use the long-only version?"** It earned more in the bull market but carries beta of 1.4. We wanted the one that protects when the group falls.
-* **"Is the 25.7% real?"** It's a QuantConnect backtest with default fees and one tested slippage case (23.3% at 10 bps). Statistical confidence is low (probabilistic Sharpe 39%) and the window is short.
-* **"Why does the short side matter if rebounds usually follow?"** Because the regime signal only flips net short after a large fall; in the backtest the short sleeve helped in 2018-style grinding declines and hurt in V-shaped recoveries. We show both.
-* **"What's the most likely way F4 loses money from here?"** A violent rebound in the first few weeks. A rebound of 8% to 29% in the basket has followed past bearish signals.
-* **"Did you look at the data to pick the window?"** The window start, the ChatGPT launch, was a thesis choice made before the final tests, but several rule parameters were tuned on data that overlaps it.
-
-## Facts used in this script (all from files in this folder)
-* QC runs Q1-Q5 (`qc_f4_results.csv`): 25.7% / Sharpe 0.985 / DD 15.7% / beta 0.11 / PSR 38.7% / 2,635 orders; +10 bps: 23.3%; halves 21.3% (DD 9.9%) and 29.1% (DD 15.7%); SPY 21.5%.
-* Offline positioning, Nov 6 2026: net stock exposure -0.5, SPY +0.24, gross 0.74, basket 17% below its 50d and 100d averages, 17% of names above their own 50d.
-* This week (equal-weight basket): Thu Nov 5 -10.0%, memory -18.3%; Fri Nov 6 +2.3%.
-* After all three signals turned bearish (58 episodes since 2012): mean next-20-day basket return +3.4%, median +4.5%, 24% fell, range -14.8% to +29.3%.
-* Pre-AI (2011 to 2022-11-21), offline F4: Sharpe 0.37, CAGR 4.4% vs SPY 12.2%.
-* Alternatives: gated AI basket 62.9% CAGR, beta 1.36, DD 27.8% (QC R1); memory basket -44% drawdown (offline AI era).
-* The S-1 statements: Claude on AWS, GCP and Azure; four chip families; Broadcom as a supplier; Fluidstack data-center services; demand exceeds compute.
+All five together save about 43 seconds, bringing the estimate to about 13:50 at 140 words a minute.

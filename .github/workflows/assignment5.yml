@@ -1,0 +1,75 @@
+name: assignment-5
+
+on:
+  pull_request:
+    paths: ["assignment_5/**", ".github/workflows/assignment5.yml"]
+  push:
+    branches: [main]
+    paths: ["assignment_5/**", ".github/workflows/assignment5.yml"]
+
+concurrency:
+  group: assignment-5-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: assignment_5
+
+env:
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  # Terraform state in R2 (S3-compatible)
+  AWS_ACCESS_KEY_ID: ${{ secrets.TF_STATE_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.TF_STATE_SECRET_ACCESS_KEY }}
+  TF_VAR_account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: assignment_5/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: npm ci
+      - run: npm test
+
+  terraform:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform fmt -check -recursive
+        working-directory: assignment_5/terraform
+      - run: terraform init -input=false -backend-config="endpoints={s3=\"https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com\"}"
+        working-directory: assignment_5/terraform
+      - run: terraform validate
+        working-directory: assignment_5/terraform
+      - run: terraform plan -input=false -lock-timeout=60s
+        if: github.event_name == 'pull_request'
+        working-directory: assignment_5/terraform
+      - run: terraform apply -input=false -auto-approve -lock-timeout=60s
+        if: github.event_name == 'push'
+        working-directory: assignment_5/terraform
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: terraform
+    runs-on: ubuntu-latest
+    environment: production   # add required reviewers in repo settings for a manual gate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: assignment_5/package-lock.json
+      - run: npm ci
+      - run: npm run data:remote
+      - run: npm run deploy

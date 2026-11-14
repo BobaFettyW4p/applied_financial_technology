@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "treasury-pricing",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-13",
+  "r2_buckets": [
+    {
+      "binding": "TREASURY_BUCKET",
+      "bucket_name": "treasury-pricing-data",
+      "remote": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "price_date": "2026-11-09",
+  "settlement_date": "2026-11-10",
+  "price_date_verification": "User-supplied date; FedInvest CSV has no date field",
+  "input_sha256": "3f92000f3e2a85fc80c1d62e9ceecca61d636aef9701a49ab0ff68268a91d66e",
+  "eligible_count": 353,
+  "priced_count": 353,
+  "excluded_by_type": {
+    "MARKET BASED BILL": 50,
+    "TIPS": 53,
+    "MARKET BASED FRN": 8
+  },
+  "clean_price_column": "end_of_day",
+  "errors": []
+}

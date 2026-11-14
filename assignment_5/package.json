@@ -1,0 +1,22 @@
+{
+  "name": "treasury-pricing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Treasury clean and dirty prices served by a Cloudflare Worker from R2.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "prices": "python3 scripts/prepare_data.py",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' -v && node --test tests/worker.test.js",
+    "data:local": "node scripts/upload_data.mjs --local",
+    "data:remote": "node scripts/upload_data.mjs --remote",
+    "dev": "wrangler dev --local --persist-to .wrangler/state --ip 127.0.0.1",
+    "dev:cloud": "wrangler dev --persist-to .wrangler/state --ip 127.0.0.1",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

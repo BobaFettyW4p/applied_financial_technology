@@ -86,6 +86,41 @@ Wrangler prints the URL. You do not need a custom domain.
 Official instructions: [R2 account setup](https://developers.cloudflare.com/r2/get-started/)
 and [Workers with R2](https://developers.cloudflare.com/r2/get-started/workers-api/).
 
+## Architecture
+
+```mermaid
+flowchart LR
+  subgraph delivery["Delivery: GitHub"]
+    direction TB
+    dev["Developer branch"] -->|"open PR"| pr["Pull request<br/>(branch protection on main)"]
+    pr --> test["test<br/>npm test (Python + Node)"]
+    test --> plan["terraform plan<br/>(PR only)"]
+    plan -->|"merge to main"| apply["terraform apply"]
+    apply --> upload["npm run data:remote<br/>upload CSV + JSON"]
+    upload --> deploy["wrangler deploy<br/>(production environment)"]
+  end
+
+  subgraph cf["Runtime: Cloudflare"]
+    direction TB
+    user(["Browser"]) -->|"HTTPS"| worker["Worker: treasury-pricing<br/>workers.dev URL"]
+    worker -->|"R2 binding<br/>TREASURY_BUCKET"| data[("R2: treasury-pricing-data<br/>private")]
+    worker -.- routes["GET /  (HTML table)<br/>GET /api/prices  (JSON)"]
+  end
+
+  state[("R2: treasury-pricing-tfstate<br/>Terraform state")]
+
+  apply -->|"creates bucket"| data
+  upload -->|"writes objects"| data
+  deploy -->|"publishes code"| worker
+  apply <-.->|"state + lock"| state
+
+  secrets["GitHub secrets<br/>Cloudflare API token<br/>R2 S3 key (state only)"] -.-> delivery
+```
+
+The Worker holds no credentials: access to the bucket comes from the binding in
+`wrangler.jsonc`. Terraform owns the bucket, Wrangler owns the Worker, and the
+data upload runs between them so a deploy never serves an empty bucket.
+
 ## Where the files belong
 
 | Location | Purpose |

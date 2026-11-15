@@ -46,10 +46,11 @@ export function validatePrices(rows) {
     a.maturity.localeCompare(b.maturity) || a.cusip.localeCompare(b.cusip));
 }
 
-export function renderPage(rows) {
+export function renderPage(rows, nonce = '') {
   const { price_date: priceDate, settlement_date: settlement } = rows[0];
   const tableRows = rows.map(row => `
-            <tr>
+            <tr data-type="${escapeHtml(row.security_type)}" data-coupon="${row.coupon}" data-maturity="${row.maturity}"
+                data-clean="${row.clean_price}" data-accrued="${row.accrued_interest}" data-dirty="${row.dirty_price}">
               <th scope="row">${escapeHtml(row.cusip)}</th>
               <td class="number">${percent.format(row.coupon)}%</td>
               <td class="maturity"><time datetime="${row.maturity}">${dateLabel(row.maturity)}</time></td>
@@ -82,6 +83,19 @@ export function renderPage(rows) {
     .table-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 36px 0 12px; }
     h2 { font-size: 16px; margin: 0; }
     .units { font-size: 12px; color: #63716c; margin: 0; }
+    .filters { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: end; margin: 0 0 14px; }
+    .filters label { display: grid; gap: 4px; font-size: 12px; color: #66736c; }
+    .filters input, .filters select { font: inherit; font-size: 13px; padding: 7px 9px; color: inherit;
+      border: 1px solid #c9d1c6; border-radius: 6px; background: #fff; width: 128px; }
+    .filters input[type=search] { width: 160px; }
+    .filters button { font: inherit; font-size: 13px; padding: 7px 12px; border: 1px solid #c9d1c6;
+      border-radius: 6px; background: #fff; cursor: pointer; }
+    .count { font-size: 12px; color: #63716c; margin: 0 0 10px; }
+    th .sort { all: unset; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+    th .sort:focus-visible { outline: 3px solid #547c60; outline-offset: 2px; }
+    th .sort::after { content: "\\2195"; color: #9aa89f; font-size: 11px; }
+    th[aria-sort=ascending] .sort::after { content: "\\2191"; color: #205840; }
+    th[aria-sort=descending] .sort::after { content: "\\2193"; color: #205840; }
     .table-scroll { max-height: 65vh; overflow: auto; background: #fff;
       border: 1px solid #dce0d8; border-radius: 8px; }
     table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
@@ -128,6 +142,16 @@ export function renderPage(rows) {
         <h2 id="table-title">Prices by maturity</h2>
         <p class="units">USD per $100 face value · Annual coupon rates</p>
       </div>
+      <form class="filters" id="filters" aria-label="Filter securities" hidden>
+        <label>CUSIP<input type="search" name="cusip" placeholder="e.g. 91282C" autocomplete="off"></label>
+        <label>Type<select name="type"><option value="">All</option><option>Note</option><option>Bond</option></select></label>
+        <label>Coupon min (%)<input type="number" name="cmin" step="0.125" min="0"></label>
+        <label>Coupon max (%)<input type="number" name="cmax" step="0.125" min="0"></label>
+        <label>Maturity from<input type="date" name="mfrom"></label>
+        <label>Maturity to<input type="date" name="mto"></label>
+        <button type="reset">Clear</button>
+      </form>
+      <p class="count" id="count" aria-live="polite"></p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Treasury prices, scroll for more securities">
         <table>
           <caption>${rows.length} securities, sorted by maturity from earliest to latest.</caption>
@@ -152,18 +176,62 @@ export function renderPage(rows) {
       <a href="/api/prices" download="treasury_prices.json">Download price data (JSON)</a>
     </footer>
   </main>
+  <script nonce="${nonce}">
+  (() => {
+    const body = document.querySelector('tbody');
+    const rows = [...body.rows];
+    const form = document.getElementById('filters');
+    const count = document.getElementById('count');
+    const heads = [...document.querySelectorAll('thead th')];
+    const keys = [['text'], ['num', 'coupon'], ['text', 'maturity'], ['num', 'clean'], ['num', 'accrued'], ['num', 'dirty']];
+    form.hidden = false;
+    function apply() {
+      const f = Object.fromEntries(new FormData(form));
+      const q = (f.cusip || '').trim().toUpperCase();
+      let shown = 0;
+      for (const r of rows) {
+        const d = r.dataset, coupon = Number(d.coupon);
+        const ok = (!q || r.cells[0].textContent.includes(q)) &&
+          (!f.type || d.type === f.type) &&
+          (f.cmin === '' || f.cmin === undefined || coupon >= Number(f.cmin)) &&
+          (f.cmax === '' || f.cmax === undefined || coupon <= Number(f.cmax)) &&
+          (!f.mfrom || d.maturity >= f.mfrom) && (!f.mto || d.maturity <= f.mto);
+        r.hidden = !ok; if (ok) shown++;
+      }
+      count.textContent = 'Showing ' + shown + ' of ' + rows.length + ' securities';
+    }
+    heads.forEach((th, i) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'sort'; b.textContent = th.textContent;
+      th.textContent = ''; th.append(b);
+      b.addEventListener('click', () => {
+        const dir = th.getAttribute('aria-sort') === 'ascending' ? -1 : 1;
+        heads.forEach(h => h.removeAttribute('aria-sort'));
+        th.setAttribute('aria-sort', dir === 1 ? 'ascending' : 'descending');
+        const [kind, key] = keys[i];
+        const val = r => i === 0 ? r.cells[0].textContent : r.dataset[key];
+        rows.sort((a, c) => dir * (kind === 'num' ? val(a) - val(c) : val(a).localeCompare(val(c)))
+          || a.cells[0].textContent.localeCompare(c.cells[0].textContent));
+        body.append(...rows);
+      });
+    });
+    form.addEventListener('input', apply);
+    form.addEventListener('reset', () => setTimeout(apply));
+    apply();
+  })();
+  </script>
 </body>
 </html>`;
 }
 
-function response(body, status, contentType, head = false) {
+function response(body, status, contentType, head = false, nonce = '') {
   return new Response(head ? null : body, {
     status,
     headers: {
       'Content-Type': contentType,
       'Cache-Control': 'no-store',
       'X-Content-Type-Options': 'nosniff',
-      'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'",
+      'Content-Security-Policy': `default-src 'none'; style-src 'unsafe-inline'; ${nonce ? `script-src 'nonce-${nonce}'; ` : ''}base-uri 'none'; frame-ancestors 'none'`,
     },
   });
 }
@@ -186,7 +254,10 @@ export default {
       const rows = validatePrices(await object.json());
       return path === '/api/prices'
         ? response(JSON.stringify(rows), 200, 'application/json; charset=utf-8', head)
-        : response(renderPage(rows), 200, 'text/html; charset=utf-8', head);
+        : (() => {
+            const nonce = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))));
+            return response(renderPage(rows, nonce), 200, 'text/html; charset=utf-8', head, nonce);
+          })();
     } catch (error) {
       console.error('Could not read Treasury prices:', error.message);
       return response('Pricing data could not be loaded. Check the Worker log for details.',

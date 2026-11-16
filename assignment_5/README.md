@@ -20,6 +20,12 @@ Keep the terminal running; Ctrl+C stops the server. This uses a local R2
 simulation and needs no Cloudflare account. The calculated data is included.
 After the first setup, run `npm run dev` to return to this local version.
 
+The table comes first, followed by a coupon timeline and four charts: median YTM by remaining maturity, coupon rate versus clean price, coupon rate versus
+accrued interest, and counts by maturity year. Click a security to select it;
+click a maturity year to filter all views. The table filters apply to every
+chart. Settlement stays fixed at November 10, 2026. Page changes appear locally
+while Wrangler is running; no data upload is needed for page-only changes.
+
 ## Cloudflare R2 setup
 
 **Use the website for account setup, then return to the VS Code terminal.**
@@ -154,3 +160,11 @@ Terms come from [Fiscal Data](https://fiscaldata.treasury.gov/datasets/treasury-
 and [TreasuryDirect](https://www.treasurydirect.gov/auctions/auction-query/).
 Saved reference files let calculations run offline. To refresh them, run
 `python3 scripts/fetch_reference_data.py --refresh` before recalculating.
+
+YTM is calculated by the Worker from each dirty price and the remaining coupon
+payments plus $100 principal, using [Treasury’s price/yield formula](https://www.treasurydirect.gov/files/laws-and-regulations/auction-regulations-uoc/31-cfr-part-356.pdf)
+(Appendix B, II.D). It is an annual percentage with semiannual compounding and
+actual days for the initial partial period. The chart shows equal-security
+medians and the 25th–75th percentile range within maturity buckets, not a
+portfolio return or the official Treasury yield curve. YTM fields are added
+when serving the page and API; the original R2 files do not need re-uploading.

@@ -110,7 +110,7 @@ flowchart LR
     direction TB
     user(["Browser"]) -->|"HTTPS"| worker["Worker: treasury-pricing<br/>workers.dev URL"]
     worker -->|"R2 binding<br/>TREASURY_BUCKET"| data[("R2: treasury-pricing-data<br/>private")]
-    worker -.- routes["GET /  (HTML table)<br/>GET /api/prices  (JSON)"]
+    worker -.- routes["GET /  (HTML table)<br/>GET /api/prices  (JSON)<br/>GET /curve  (curve &amp; rich/cheap)<br/>GET /api/curve  (JSON)"]
   end
 
   state[("R2: treasury-pricing-tfstate<br/>Terraform state")]
@@ -131,10 +131,12 @@ data upload runs between them so a deploy never serves an empty bucket.
 
 | Location | Purpose |
 | --- | --- |
-| `src/index.js` | Worker and webpage |
-| `scripts/` | Download reference data, calculate prices, and upload to R2 |
-| `data/raw/` | Original FedInvest CSV |
-| `data/reference/` | Treasury terms, coupon schedules, and source URLs |
+| `src/index.js` | Worker routes and the prices page |
+| `src/curve.js` | The `/curve` page: fitted curve, model comparison, rich/cheap, backtest |
+| `src/shared.js` | Helpers shared by both pages (escaping, dates, nav, responses) |
+| `scripts/` | Download reference data, calculate prices, fit curves, backtest, and upload to R2 |
+| `data/raw/` | Original FedInvest CSV; `history/` holds 62 daily FedInvest files (Aug 24 – Nov 20, 2026) |
+| `data/reference/` | Treasury terms, coupon schedules, and source URLs; `history/` adds securities that matured during the history window |
 | `data/processed/` | Calculated CSV/JSON and validation report |
 | `tests/` | Financial calculations and Worker checks |
 | `package.json` / `package-lock.json` | Commands and reproducible dependencies |
@@ -168,3 +170,33 @@ actual days for the initial partial period. The chart shows equal-security
 medians and the 25th–75th percentile range within maturity buckets, not a
 portfolio return or the official Treasury yield curve. YTM fields are added
 when serving the page and API; the original R2 files do not need re-uploading.
+
+## Curve and rich/cheap analysis (`/curve`)
+
+The `/curve` page answers which curve model to use, how rich/cheap is measured,
+whether cheap securities are really cheap, and what edge that gives. Every
+number on it is computed offline by the Python scripts below (standard library
+only) and served from `data/processed/curve_page.json` in R2.
+
+| Script | What it does |
+| --- | --- |
+| `curve_models.py` | Fits six zero-curve models (Nelson-Siegel, NSS, three splines, an overfit spline) to the same bonds and compares them: nested 10-fold CV (interleaved and maturity-blocked), Diebold-Mariano tests, residual clustering, bootstrap stability, forward-curve shape. Splines choose their smoothing penalty by blocked CV. |
+| `rich_cheap.py` | Scores every security with the selected model (`--model nss` for the original fit): leave-one-out yield gap to the curve, positive = cheap. |
+| `fetch_history_reference.py` | Downloads terms and coupon schedules for securities in `data/raw/history/` that are missing from the Nov 9 reference set. |
+| `signal_backtest.py` | Refits every model on each historical day and tests whether scores converge: Fama-MacBeth slopes, a cheap-minus-rich trade net of FedInvest bid/ask, and the same trade entered a day late. |
+| `issue_selection.py` | Measures the buy-and-hold edge: yield pickup from buying the cheapest issue in each maturity range, net of purchase cost. |
+| `robustness_checks.py` | Smoothing-penalty sweep (interleaved vs blocked CV) and liquidity-factor specifications. |
+| `build_curve_page.py` | Combines the outputs into `curve_page.json` and checks they come from the same run. |
+
+```bash
+python3 scripts/fetch_history_reference.py   # only when history files are added
+npm run curve                                 # all of the above, about 30 minutes
+npm run curve:page                            # rebuild curve_page.json only
+npm test
+npm run data:local                            # or data:remote, then refresh /curve
+```
+
+The historical price files were downloaded from FedInvest's historical prices
+page through a browser (the site rejects scripted requests); each file is named
+by its price date because the CSV has no date column. Nov 20 is excluded by the
+backtest because FedInvest had not yet published its end-of-day prices.

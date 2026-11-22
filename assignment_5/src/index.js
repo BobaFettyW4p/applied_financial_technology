@@ -1,5 +1,7 @@
-// The Worker reads calculated prices from R2 and builds the table on each visit.
+// The Worker reads calculated data from R2 and builds each page on every visit.
+import { CURVE_KEY, renderCurvePage, validateCurve } from './curve.js';
 import { browserScript } from './interactions.js';
+import { dateLabel, escapeHtml, navCss, response, siteNav } from './shared.js';
 import { withYield } from './yields.js';
 
 const DATA_KEY = 'treasury_prices.json';
@@ -7,20 +9,6 @@ const amount = new Intl.NumberFormat('en-US', {
   minimumFractionDigits: 6, maximumFractionDigits: 6,
 });
 const percent = new Intl.NumberFormat('en-US', { maximumFractionDigits: 3 });
-const displayDate = new Intl.DateTimeFormat('en-US', {
-  month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC',
-});
-
-function escapeHtml(value) {
-  return String(value).replace(/[&<>"']/g, character => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  })[character]);
-}
-
-function dateLabel(value) {
-  // Use UTC so timezone differences do not change the displayed calendar date.
-  return displayDate.format(new Date(`${value}T00:00:00Z`));
-}
 
 export function validatePrices(rows) {
   if (!Array.isArray(rows) || !rows.length) throw new Error('No price records found');
@@ -75,7 +63,8 @@ export function renderPage(rows, nonce = '') {
     * { box-sizing: border-box; }
     [hidden] { display: none !important; }
     body { margin: 0; }
-    main { max-width: 1180px; padding: 56px 28px 32px; margin: auto; }
+    main { max-width: 1180px; padding: 40px 28px 32px; margin: auto; }
+    ${navCss}
     .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: #577263; }
     h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(36px, 5vw, 52px);
       font-weight: 400; letter-spacing: -.035em; margin: 12px 0 16px; }
@@ -196,6 +185,7 @@ export function renderPage(rows, nonce = '') {
 </head>
 <body>
   <main>
+    ${siteNav('/')}
     <header>
       <div class="eyebrow">U.S. Treasury · Notes &amp; bonds</div>
       <h1>Treasury prices</h1>
@@ -306,17 +296,14 @@ export function renderPage(rows, nonce = '') {
 </html>`;
 }
 
-function response(body, status, contentType, head = false, nonce = '') {
-  return new Response(head ? null : body, {
-    status,
-    headers: {
-      'Content-Type': contentType,
-      'Cache-Control': 'no-store',
-      'X-Content-Type-Options': 'nosniff',
-      'Content-Security-Policy': `default-src 'none'; style-src 'unsafe-inline'; ${nonce ? `script-src 'nonce-${nonce}'; ` : ''}base-uri 'none'; frame-ancestors 'none'`,
-    },
-  });
-}
+// Prices are served with their calculated yields (yields.js) on both routes.
+const pricesWithYields = rows => validatePrices(rows).map(withYield);
+const ROUTES = {
+  '/': { key: DATA_KEY, validate: pricesWithYields, page: renderPage, label: 'Pricing' },
+  '/api/prices': { key: DATA_KEY, validate: pricesWithYields, label: 'Pricing' },
+  '/curve': { key: CURVE_KEY, validate: validateCurve, page: renderCurvePage, label: 'Curve' },
+  '/api/curve': { key: CURVE_KEY, validate: validateCurve, label: 'Curve' },
+};
 
 export default {
   async fetch(request, env) {
@@ -326,23 +313,21 @@ export default {
       return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } });
     }
     if (path === '/favicon.ico') return new Response(null, { status: 204 });
-    if (!['/', '/api/prices'].includes(path)) return response('Not found', 404, 'text/plain', head);
+    const route = ROUTES[path];
+    if (!route) return response('Not found', 404, 'text/plain', head);
     try {
-      const object = await env.TREASURY_BUCKET.get(DATA_KEY);
+      const object = await env.TREASURY_BUCKET.get(route.key);
       if (!object) {
-        return response('Pricing data is unavailable. Load treasury_prices.json into the R2 bucket and refresh.',
+        return response(`${route.label} data is unavailable. Load ${route.key} into the R2 bucket and refresh.`,
           503, 'text/plain; charset=utf-8', head);
       }
-      const rows = validatePrices(await object.json()).map(withYield);
-      return path === '/api/prices'
-        ? response(JSON.stringify(rows), 200, 'application/json; charset=utf-8', head)
-        : (() => {
-            const nonce = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))));
-            return response(renderPage(rows, nonce), 200, 'text/html; charset=utf-8', head, nonce);
-          })();
+      const data = route.validate(await object.json());
+      if (!route.page) return response(JSON.stringify(data), 200, 'application/json; charset=utf-8', head);
+      const nonce = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))));
+      return response(route.page(data, nonce), 200, 'text/html; charset=utf-8', head, nonce);
     } catch (error) {
-      console.error('Could not read Treasury prices:', error.message);
-      return response('Pricing data could not be loaded. Check the Worker log for details.',
+      console.error(`Could not read ${route.key}:`, error.message);
+      return response(`${route.label} data could not be loaded. Check the Worker log for details.`,
         503, 'text/plain; charset=utf-8', head);
     }
   },

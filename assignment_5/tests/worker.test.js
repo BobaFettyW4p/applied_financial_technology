@@ -7,12 +7,17 @@ import { browserScript } from '../src/interactions.js';
 import { dirtyPriceAtYield, yieldToMaturity, maturityBucket, withYield } from '../src/yields.js';
 
 const prices = JSON.parse(readFileSync(new URL('../data/processed/treasury_prices.json', import.meta.url)));
-function bucketWith(rows) {
+const curve = JSON.parse(readFileSync(new URL('../data/processed/curve_page.json', import.meta.url)));
+// A fake R2 bucket. `rows` is the price data; `curveDoc` the curve page data (null = missing).
+function bucketWith(rows, curveDoc = curve) {
+  const objects = { 'treasury_prices.json': rows, 'curve_page.json': curveDoc };
   return { TREASURY_BUCKET: { async get(key) {
-    assert.equal(key, 'treasury_prices.json');
-    return rows === null ? null : { async json() { return rows; } };
+    assert.ok(key in objects, `unexpected key ${key}`);
+    const value = objects[key];
+    return value === null ? null : { async json() { return value; } };
   } } };
 }
+
 
 test('page renders all securities in maturity order from the R2 response', async () => {
   const response = await worker.fetch(new Request('https://example.com/'), bucketWith([...prices].reverse()));
@@ -112,4 +117,76 @@ test('maturity buckets use calendar anniversaries with no overlapping boundaries
     ['2027-11-09', 0], ['2027-11-10', 1], ['2029-11-09', 1],
     ['2029-11-10', 2], ['2031-11-10', 3], ['2036-11-10', 4], ['2046-11-10', 5],
   ]) assert.equal(maturityBucket({ ...base, maturity }), bucket);
+});
+
+test('prices page links to the curve page', async () => {
+  const html = await (await worker.fetch(new Request('https://example.com/'), bucketWith(prices))).text();
+  assert.ok(html.includes('href="/curve"'));
+  assert.ok(html.includes('aria-current="page">Prices'));
+});
+
+test('curve page renders every security, the scorecard and the answers', async () => {
+  const response = await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices));
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get('content-type'), /text\/html/);
+  const html = await response.text();
+  const tbody = html.slice(html.indexOf('id="bond-table"'));
+  assert.equal((tbody.match(/<tr data-years=/g) || []).length, curve.bonds.length);
+  for (const m of curve.models) assert.ok(html.includes(m.label.replace(/&/g, '&amp;')), m.label);
+  for (const q of ['Which curve?', 'How is rich/cheap measured?', 'Is it really cheap?', "What's the edge?"]) {
+    assert.ok(html.includes(q.replace("'", '&#39;')) || html.includes(q), q);
+  }
+  // The script carries the CSP nonce, and the JSON island cannot break out of its script tag.
+  const nonce = response.headers.get('content-security-policy').match(/'nonce-([^']+)'/)[1];
+  assert.ok(html.includes(`<script nonce="${nonce}">`));
+  const island = html.match(/<script type="application\/json" id="curve-data">([\s\S]*?)<\/script>/)[1];
+  assert.ok(!island.includes('<'));
+  assert.equal(JSON.parse(island).bonds.length, curve.bonds.length);
+});
+
+test('cheapest security is listed first with its selected-model score', async () => {
+  const html = await (await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices))).text();
+  const best = [...curve.bonds].sort((a, b) => b.rc[curve.selected] - a.rc[curve.selected])[0];
+  const first = html.slice(html.indexOf('id="bond-table"')).match(/<th scope="row">(.*?)<\/th>/)[1];
+  assert.equal(first, best.cusip);
+});
+
+test('curve JSON route returns the curve data read from R2', async () => {
+  const response = await worker.fetch(new Request('https://example.com/api/curve'), bucketWith(prices));
+  assert.equal(response.status, 200);
+  assert.deepEqual(await response.json(), JSON.parse(JSON.stringify(curve)));  // -0 becomes 0
+});
+
+test('missing or malformed curve data returns 503, prices page unaffected', async () => {
+  const missing = await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices, null));
+  assert.equal(missing.status, 503);
+  const broken = structuredClone(curve);
+  broken.bonds[0].rc[curve.selected] = 'cheap';
+  const bad = await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices, broken));
+  assert.equal(bad.status, 503);
+  const dup = structuredClone(curve);
+  dup.bonds[1].cusip = dup.bonds[0].cusip;
+  assert.equal((await worker.fetch(new Request('https://example.com/api/curve'), bucketWith(prices, dup))).status, 503);
+  const prices200 = await worker.fetch(new Request('https://example.com/'), bucketWith(prices, null));
+  assert.equal(prices200.status, 200);
+});
+
+test('curve labels are escaped in the page', async () => {
+  const hostile = structuredClone(curve);
+  hostile.models[0].label = '<img src=x onerror=alert(1)>';
+  const html = await (await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices, hostile))).text();
+  assert.ok(!html.includes('<img src=x'));
+  assert.ok(html.includes('&lt;img src=x onerror=alert(1)&gt;'));
+});
+
+test('robustness section renders when present and is omitted when absent', async () => {
+  const html = await (await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices))).text();
+  assert.equal(html.includes('id="robust-title"'), Boolean(curve.robustness));
+  const without = structuredClone(curve);
+  delete without.robustness;
+  const html2 = await (await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices, without))).text();
+  assert.ok(!html2.includes('id="robust-title"'));
+  const bad = structuredClone(curve);
+  bad.robustness = { watch: ['x'], penalty_sweep: [] };
+  assert.equal((await worker.fetch(new Request('https://example.com/curve'), bucketWith(prices, bad))).status, 503);
 });

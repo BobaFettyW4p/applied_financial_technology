@@ -9,6 +9,8 @@
   },
   "scripts": {
     "prices": "python3 scripts/prepare_data.py",
+    "curve": "python3 scripts/curve_models.py && python3 scripts/rich_cheap.py && python3 scripts/signal_backtest.py && python3 scripts/issue_selection.py && python3 scripts/robustness_checks.py && python3 scripts/build_curve_page.py",
+    "curve:page": "python3 scripts/build_curve_page.py",
     "test": "python3 -m unittest discover -s tests -p 'test_*.py' -v && node --test tests/worker.test.js",
     "data:local": "node scripts/upload_data.mjs --local",
     "data:remote": "node scripts/upload_data.mjs --remote",

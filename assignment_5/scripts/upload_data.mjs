@@ -1,4 +1,4 @@
-// Copy the source CSV and calculated prices to the selected R2 bucket.
+// Copy the source CSV, calculated prices and curve analysis to the selected R2 bucket.
 // --local writes only to this computer. --remote writes to Cloudflare.
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -21,10 +21,16 @@ if (report.errors.length || report.priced_count !== report.eligible_count ||
     createHash('sha256').update(source).digest('hex') !== report.input_sha256) {
   throw new Error('The price files need to be rebuilt. Run npm run prices and npm test first.');
 }
+const curve = JSON.parse(readFileSync(resolve(root, 'data/processed/curve_page.json'), 'utf8'));
+if (!curve.models?.some(m => m.key === curve.selected) || !curve.bonds?.length ||
+    curve.price_date !== prices[0].price_date) {
+  throw new Error('curve_page.json is missing or out of date. Run npm run curve and npm test first.');
+}
 
 const files = [
   ['securityprice.csv', 'data/raw/securityprice.csv', 'text/csv'],
   ['treasury_prices.json', 'data/processed/treasury_prices.json', 'application/json'],
+  ['curve_page.json', 'data/processed/curve_page.json', 'application/json'],
 ];
 const wrangler = resolve(root, 'node_modules/wrangler/bin/wrangler.js');
 for (const [key, file, contentType] of files) {

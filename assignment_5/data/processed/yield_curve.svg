@@ -1,0 +1,371 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="system-ui, sans-serif" font-size="12">
+<rect width="900" height="520" fill="#ffffff"/>
+<text x="70" y="28" font-size="18" font-weight="600" fill="#111827">U.S. Treasury Yield Curve</text>
+<text x="70" y="46" fill="#6b7280">Notes and bonds, yield to maturity · maturities ≥ 0.5y · priced 2026-11-09</text>
+<line x1="70" x2="870" y1="460.0" y2="460.0" stroke="#e5e7eb"/>
+<text x="62" y="464.0" text-anchor="end" fill="#6b7280">4.00%</text>
+<line x1="70" x2="870" y1="393.3" y2="393.3" stroke="#e5e7eb"/>
+<text x="62" y="397.3" text-anchor="end" fill="#6b7280">4.25%</text>
+<line x1="70" x2="870" y1="326.7" y2="326.7" stroke="#e5e7eb"/>
+<text x="62" y="330.7" text-anchor="end" fill="#6b7280">4.50%</text>
+<line x1="70" x2="870" y1="260.0" y2="260.0" stroke="#e5e7eb"/>
+<text x="62" y="264.0" text-anchor="end" fill="#6b7280">4.75%</text>
+<line x1="70" x2="870" y1="193.3" y2="193.3" stroke="#e5e7eb"/>
+<text x="62" y="197.3" text-anchor="end" fill="#6b7280">5.00%</text>
+<line x1="70" x2="870" y1="126.7" y2="126.7" stroke="#e5e7eb"/>
+<text x="62" y="130.7" text-anchor="end" fill="#6b7280">5.25%</text>
+<line x1="70" x2="870" y1="60.0" y2="60.0" stroke="#e5e7eb"/>
+<text x="62" y="64.0" text-anchor="end" fill="#6b7280">5.50%</text>
+<line x1="70.0" x2="70.0" y1="60" y2="460" stroke="#f3f4f6"/>
+<text x="70.0" y="478" text-anchor="middle" fill="#6b7280">0</text>
+<line x1="203.3" x2="203.3" y1="60" y2="460" stroke="#f3f4f6"/>
+<text x="203.3" y="478" text-anchor="middle" fill="#6b7280">5</text>
+<line x1="336.7" x2="336.7" y1="60" y2="460" stroke="#f3f4f6"/>
+<text x="336.7" y="478" text-anchor="middle" fill="#6b7280">10</text>
+<line x1="470.0" x2="470.0" y1="60" y2="460" stroke="#f3f4f6"/>
+<text x="470.0" y="478" text-anchor="middle" fill="#6b7280">15</text>
+<line x1="603.3" x2="603.3" y1="60" y2="460" stroke="#f3f4f6"/>
+<text x="603.3" y="478" text-anchor="middle" fill="#6b7280">20</text>
+<line x1="736.7" x2="736.7" y1="60" y2="460" stroke="#f3f4f6"/>
+<text x="736.7" y="478" text-anchor="middle" fill="#6b7280">25</text>
+<line x1="870.0" x2="870.0" y1="60" y2="460" stroke="#f3f4f6"/>
+<text x="870.0" y="478" text-anchor="middle" fill="#6b7280">30</text>
+<text x="470.0" y="504" text-anchor="middle" fill="#374151">Years to maturity</text>
+<text transform="translate(18 260.0) rotate(-90)" text-anchor="middle" fill="#374151">Yield to maturity</text>
+<circle cx="83.6" cy="396.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.51y, 4.239%</title></circle>
+<circle cx="83.6" cy="376.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.51y, 4.312%</title></circle>
+<circle cx="84.7" cy="379.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.55y, 4.303%</title></circle>
+<circle cx="84.7" cy="381.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.55y, 4.293%</title></circle>
+<circle cx="84.7" cy="371.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.55y, 4.332%</title></circle>
+<circle cx="85.8" cy="381.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.59y, 4.296%</title></circle>
+<circle cx="86.9" cy="377.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.64y, 4.310%</title></circle>
+<circle cx="86.9" cy="380.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.64y, 4.297%</title></circle>
+<circle cx="86.9" cy="367.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.64y, 4.345%</title></circle>
+<circle cx="88.0" cy="374.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.68y, 4.320%</title></circle>
+<circle cx="89.2" cy="361.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.72y, 4.369%</title></circle>
+<circle cx="89.2" cy="356.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.72y, 4.387%</title></circle>
+<circle cx="89.2" cy="353.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.72y, 4.400%</title></circle>
+<circle cx="90.3" cy="334.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 0.76y, 4.469%</title></circle>
+<circle cx="90.3" cy="355.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.76y, 4.391%</title></circle>
+<circle cx="90.3" cy="360.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.76y, 4.374%</title></circle>
+<circle cx="91.5" cy="359.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.80y, 4.378%</title></circle>
+<circle cx="91.5" cy="353.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.80y, 4.400%</title></circle>
+<circle cx="91.5" cy="359.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.80y, 4.379%</title></circle>
+<circle cx="92.6" cy="353.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.85y, 4.398%</title></circle>
+<circle cx="93.7" cy="352.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.89y, 4.403%</title></circle>
+<circle cx="93.7" cy="360.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.89y, 4.375%</title></circle>
+<circle cx="93.7" cy="352.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.89y, 4.404%</title></circle>
+<circle cx="94.8" cy="346.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.93y, 4.428%</title></circle>
+<circle cx="95.9" cy="340.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.97y, 4.450%</title></circle>
+<circle cx="95.9" cy="347.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.97y, 4.422%</title></circle>
+<circle cx="95.9" cy="336.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 0.97y, 4.462%</title></circle>
+<circle cx="97.0" cy="293.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 1.01y, 4.624%</title></circle>
+<circle cx="97.0" cy="340.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.01y, 4.449%</title></circle>
+<circle cx="97.0" cy="341.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.01y, 4.443%</title></circle>
+<circle cx="98.1" cy="338.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.05y, 4.457%</title></circle>
+<circle cx="98.1" cy="338.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.05y, 4.456%</title></circle>
+<circle cx="98.1" cy="332.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.05y, 4.477%</title></circle>
+<circle cx="99.2" cy="334.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.10y, 4.469%</title></circle>
+<circle cx="100.4" cy="328.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.14y, 4.495%</title></circle>
+<circle cx="100.4" cy="335.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.14y, 4.469%</title></circle>
+<circle cx="100.4" cy="331.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.14y, 4.481%</title></circle>
+<circle cx="101.5" cy="328.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.18y, 4.493%</title></circle>
+<circle cx="102.6" cy="328.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.22y, 4.493%</title></circle>
+<circle cx="102.6" cy="332.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.22y, 4.478%</title></circle>
+<circle cx="103.7" cy="327.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.26y, 4.496%</title></circle>
+<circle cx="103.7" cy="332.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.26y, 4.477%</title></circle>
+<circle cx="104.8" cy="322.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.30y, 4.517%</title></circle>
+<circle cx="104.8" cy="328.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.30y, 4.495%</title></circle>
+<circle cx="104.8" cy="328.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.30y, 4.494%</title></circle>
+<circle cx="105.8" cy="326.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.34y, 4.501%</title></circle>
+<circle cx="107.0" cy="322.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.39y, 4.514%</title></circle>
+<circle cx="107.0" cy="322.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.39y, 4.515%</title></circle>
+<circle cx="107.0" cy="325.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.39y, 4.506%</title></circle>
+<circle cx="108.1" cy="320.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.43y, 4.525%</title></circle>
+<circle cx="109.2" cy="318.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.47y, 4.532%</title></circle>
+<circle cx="109.2" cy="321.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.47y, 4.519%</title></circle>
+<circle cx="109.2" cy="319.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.47y, 4.525%</title></circle>
+<circle cx="110.3" cy="316.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.51y, 4.538%</title></circle>
+<circle cx="110.3" cy="319.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.51y, 4.527%</title></circle>
+<circle cx="111.5" cy="318.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.56y, 4.532%</title></circle>
+<circle cx="111.5" cy="319.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.56y, 4.529%</title></circle>
+<circle cx="111.5" cy="320.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.56y, 4.525%</title></circle>
+<circle cx="112.6" cy="318.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.60y, 4.529%</title></circle>
+<circle cx="113.7" cy="313.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.64y, 4.550%</title></circle>
+<circle cx="113.7" cy="316.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.64y, 4.537%</title></circle>
+<circle cx="113.7" cy="315.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.64y, 4.542%</title></circle>
+<circle cx="114.8" cy="311.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.68y, 4.556%</title></circle>
+<circle cx="115.9" cy="309.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.72y, 4.565%</title></circle>
+<circle cx="115.9" cy="315.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.72y, 4.541%</title></circle>
+<circle cx="115.9" cy="313.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.72y, 4.551%</title></circle>
+<circle cx="117.0" cy="295.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 1.76y, 4.619%</title></circle>
+<circle cx="117.0" cy="308.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.76y, 4.569%</title></circle>
+<circle cx="117.0" cy="312.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.76y, 4.554%</title></circle>
+<circle cx="118.2" cy="307.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.81y, 4.572%</title></circle>
+<circle cx="118.2" cy="312.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.81y, 4.554%</title></circle>
+<circle cx="118.2" cy="310.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.81y, 4.560%</title></circle>
+<circle cx="119.3" cy="308.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.85y, 4.569%</title></circle>
+<circle cx="120.4" cy="308.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.89y, 4.569%</title></circle>
+<circle cx="120.4" cy="308.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.89y, 4.570%</title></circle>
+<circle cx="120.4" cy="307.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.89y, 4.573%</title></circle>
+<circle cx="121.5" cy="310.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.93y, 4.560%</title></circle>
+<circle cx="122.6" cy="306.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.97y, 4.574%</title></circle>
+<circle cx="122.6" cy="307.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.97y, 4.573%</title></circle>
+<circle cx="122.6" cy="311.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 1.97y, 4.557%</title></circle>
+<circle cx="123.7" cy="297.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 2.02y, 4.609%</title></circle>
+<circle cx="123.7" cy="308.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.02y, 4.570%</title></circle>
+<circle cx="123.7" cy="308.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.02y, 4.567%</title></circle>
+<circle cx="124.8" cy="306.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.06y, 4.576%</title></circle>
+<circle cx="124.8" cy="308.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.06y, 4.567%</title></circle>
+<circle cx="125.9" cy="307.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.10y, 4.573%</title></circle>
+<circle cx="127.1" cy="304.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.14y, 4.584%</title></circle>
+<circle cx="127.1" cy="308.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.14y, 4.570%</title></circle>
+<circle cx="128.2" cy="305.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.18y, 4.579%</title></circle>
+<circle cx="129.4" cy="302.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.23y, 4.589%</title></circle>
+<circle cx="129.4" cy="305.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.23y, 4.580%</title></circle>
+<circle cx="130.5" cy="303.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 2.27y, 4.585%</title></circle>
+<circle cx="130.5" cy="302.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.27y, 4.592%</title></circle>
+<circle cx="130.5" cy="304.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.27y, 4.585%</title></circle>
+<circle cx="131.4" cy="302.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.30y, 4.590%</title></circle>
+<circle cx="131.4" cy="305.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.30y, 4.580%</title></circle>
+<circle cx="132.5" cy="306.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.34y, 4.578%</title></circle>
+<circle cx="133.7" cy="301.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.39y, 4.595%</title></circle>
+<circle cx="133.7" cy="304.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.39y, 4.584%</title></circle>
+<circle cx="134.8" cy="303.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.43y, 4.589%</title></circle>
+<circle cx="135.9" cy="302.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.47y, 4.591%</title></circle>
+<circle cx="135.9" cy="300.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.47y, 4.597%</title></circle>
+<circle cx="136.9" cy="300.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.51y, 4.597%</title></circle>
+<circle cx="136.9" cy="301.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.51y, 4.593%</title></circle>
+<circle cx="138.1" cy="300.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.55y, 4.597%</title></circle>
+<circle cx="138.1" cy="299.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.55y, 4.604%</title></circle>
+<circle cx="139.2" cy="299.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.60y, 4.601%</title></circle>
+<circle cx="140.3" cy="297.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.64y, 4.609%</title></circle>
+<circle cx="140.3" cy="302.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.64y, 4.591%</title></circle>
+<circle cx="141.4" cy="300.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.68y, 4.599%</title></circle>
+<circle cx="142.6" cy="297.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.72y, 4.611%</title></circle>
+<circle cx="142.6" cy="299.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.72y, 4.603%</title></circle>
+<circle cx="143.7" cy="293.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 2.76y, 4.624%</title></circle>
+<circle cx="143.7" cy="301.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.76y, 4.594%</title></circle>
+<circle cx="143.7" cy="299.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.76y, 4.601%</title></circle>
+<circle cx="144.8" cy="296.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.81y, 4.613%</title></circle>
+<circle cx="144.8" cy="294.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.81y, 4.620%</title></circle>
+<circle cx="145.9" cy="297.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.85y, 4.610%</title></circle>
+<circle cx="147.0" cy="294.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.89y, 4.621%</title></circle>
+<circle cx="147.0" cy="297.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.89y, 4.609%</title></circle>
+<circle cx="148.1" cy="297.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.93y, 4.609%</title></circle>
+<circle cx="149.3" cy="296.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.97y, 4.614%</title></circle>
+<circle cx="149.3" cy="296.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 2.97y, 4.614%</title></circle>
+<circle cx="150.4" cy="302.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.01y, 4.589%</title></circle>
+<circle cx="151.5" cy="295.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.06y, 4.617%</title></circle>
+<circle cx="151.5" cy="293.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.06y, 4.623%</title></circle>
+<circle cx="153.7" cy="291.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.14y, 4.630%</title></circle>
+<circle cx="153.7" cy="294.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.14y, 4.622%</title></circle>
+<circle cx="156.0" cy="292.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.23y, 4.627%</title></circle>
+<circle cx="156.0" cy="292.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.23y, 4.628%</title></circle>
+<circle cx="157.1" cy="289.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.27y, 4.638%</title></circle>
+<circle cx="158.0" cy="292.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.30y, 4.627%</title></circle>
+<circle cx="160.3" cy="288.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.39y, 4.642%</title></circle>
+<circle cx="160.3" cy="291.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.39y, 4.633%</title></circle>
+<circle cx="162.5" cy="291.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.47y, 4.632%</title></circle>
+<circle cx="162.5" cy="291.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.47y, 4.633%</title></circle>
+<circle cx="163.6" cy="281.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 3.51y, 4.671%</title></circle>
+<circle cx="163.6" cy="289.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.51y, 4.638%</title></circle>
+<circle cx="164.8" cy="287.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.55y, 4.646%</title></circle>
+<circle cx="164.8" cy="290.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.55y, 4.635%</title></circle>
+<circle cx="167.0" cy="288.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.64y, 4.645%</title></circle>
+<circle cx="167.0" cy="287.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.64y, 4.647%</title></circle>
+<circle cx="169.2" cy="288.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.72y, 4.645%</title></circle>
+<circle cx="169.2" cy="289.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.72y, 4.640%</title></circle>
+<circle cx="170.3" cy="286.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.76y, 4.649%</title></circle>
+<circle cx="171.5" cy="284.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.81y, 4.658%</title></circle>
+<circle cx="171.5" cy="285.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.81y, 4.656%</title></circle>
+<circle cx="173.7" cy="286.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.89y, 4.650%</title></circle>
+<circle cx="173.7" cy="285.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.89y, 4.654%</title></circle>
+<circle cx="175.9" cy="284.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.97y, 4.657%</title></circle>
+<circle cx="175.9" cy="286.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 3.97y, 4.652%</title></circle>
+<circle cx="177.0" cy="283.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.01y, 4.662%</title></circle>
+<circle cx="178.1" cy="282.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.05y, 4.665%</title></circle>
+<circle cx="178.1" cy="283.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.05y, 4.662%</title></circle>
+<circle cx="180.4" cy="283.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.14y, 4.663%</title></circle>
+<circle cx="180.4" cy="285.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.14y, 4.656%</title></circle>
+<circle cx="182.7" cy="282.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.22y, 4.666%</title></circle>
+<circle cx="182.7" cy="283.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.22y, 4.663%</title></circle>
+<circle cx="183.7" cy="291.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 4.27y, 4.630%</title></circle>
+<circle cx="183.7" cy="288.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.27y, 4.643%</title></circle>
+<circle cx="184.7" cy="281.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.30y, 4.670%</title></circle>
+<circle cx="184.7" cy="284.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.30y, 4.657%</title></circle>
+<circle cx="187.0" cy="282.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.39y, 4.665%</title></circle>
+<circle cx="187.0" cy="283.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.39y, 4.662%</title></circle>
+<circle cx="189.2" cy="280.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.47y, 4.672%</title></circle>
+<circle cx="189.2" cy="282.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.47y, 4.665%</title></circle>
+<circle cx="190.2" cy="282.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.51y, 4.666%</title></circle>
+<circle cx="191.4" cy="281.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.55y, 4.671%</title></circle>
+<circle cx="191.4" cy="283.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.55y, 4.663%</title></circle>
+<circle cx="193.6" cy="280.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.64y, 4.673%</title></circle>
+<circle cx="193.6" cy="281.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.64y, 4.669%</title></circle>
+<circle cx="195.9" cy="280.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.72y, 4.675%</title></circle>
+<circle cx="195.9" cy="280.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.72y, 4.672%</title></circle>
+<circle cx="197.0" cy="278.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.76y, 4.681%</title></circle>
+<circle cx="198.1" cy="278.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.80y, 4.681%</title></circle>
+<circle cx="198.1" cy="282.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.80y, 4.667%</title></circle>
+<circle cx="200.3" cy="276.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.89y, 4.687%</title></circle>
+<circle cx="200.3" cy="280.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.89y, 4.674%</title></circle>
+<circle cx="202.6" cy="276.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.97y, 4.687%</title></circle>
+<circle cx="202.6" cy="281.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 4.97y, 4.671%</title></circle>
+<circle cx="203.7" cy="274.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.01y, 4.697%</title></circle>
+<circle cx="204.8" cy="275.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.05y, 4.693%</title></circle>
+<circle cx="207.0" cy="275.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.14y, 4.692%</title></circle>
+<circle cx="209.3" cy="273.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.22y, 4.701%</title></circle>
+<circle cx="210.4" cy="270.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.26y, 4.712%</title></circle>
+<circle cx="211.4" cy="272.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.30y, 4.702%</title></circle>
+<circle cx="213.7" cy="273.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.39y, 4.701%</title></circle>
+<circle cx="215.9" cy="273.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.47y, 4.700%</title></circle>
+<circle cx="217.0" cy="269.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.51y, 4.715%</title></circle>
+<circle cx="218.1" cy="270.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.56y, 4.712%</title></circle>
+<circle cx="220.3" cy="269.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.64y, 4.713%</title></circle>
+<circle cx="222.6" cy="267.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.72y, 4.723%</title></circle>
+<circle cx="223.7" cy="266.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.76y, 4.727%</title></circle>
+<circle cx="224.9" cy="266.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.81y, 4.726%</title></circle>
+<circle cx="227.0" cy="267.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.89y, 4.722%</title></circle>
+<circle cx="229.3" cy="264.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 5.97y, 4.733%</title></circle>
+<circle cx="230.4" cy="264.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.02y, 4.734%</title></circle>
+<circle cx="231.5" cy="264.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.06y, 4.733%</title></circle>
+<circle cx="233.8" cy="264.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.14y, 4.733%</title></circle>
+<circle cx="236.0" cy="261.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.23y, 4.743%</title></circle>
+<circle cx="237.1" cy="261.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.27y, 4.746%</title></circle>
+<circle cx="238.1" cy="262.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.30y, 4.740%</title></circle>
+<circle cx="240.3" cy="262.2" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.39y, 4.742%</title></circle>
+<circle cx="242.5" cy="260.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.47y, 4.748%</title></circle>
+<circle cx="243.6" cy="258.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.51y, 4.756%</title></circle>
+<circle cx="244.8" cy="260.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.55y, 4.748%</title></circle>
+<circle cx="247.0" cy="259.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.64y, 4.754%</title></circle>
+<circle cx="249.2" cy="257.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.72y, 4.758%</title></circle>
+<circle cx="250.3" cy="256.3" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.76y, 4.764%</title></circle>
+<circle cx="251.5" cy="257.4" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.81y, 4.760%</title></circle>
+<circle cx="253.7" cy="258.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.89y, 4.757%</title></circle>
+<circle cx="256.0" cy="257.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 6.97y, 4.758%</title></circle>
+<circle cx="257.0" cy="256.1" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 7.01y, 4.765%</title></circle>
+<circle cx="263.8" cy="251.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 7.27y, 4.781%</title></circle>
+<circle cx="270.3" cy="250.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 7.51y, 4.785%</title></circle>
+<circle cx="277.0" cy="246.9" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 7.76y, 4.799%</title></circle>
+<circle cx="283.7" cy="244.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 8.01y, 4.810%</title></circle>
+<circle cx="290.4" cy="240.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 8.27y, 4.823%</title></circle>
+<circle cx="296.9" cy="237.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 8.51y, 4.833%</title></circle>
+<circle cx="303.6" cy="235.7" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 8.76y, 4.841%</title></circle>
+<circle cx="310.3" cy="233.0" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 9.01y, 4.851%</title></circle>
+<circle cx="317.1" cy="275.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 9.26y, 4.692%</title></circle>
+<circle cx="317.1" cy="231.8" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 9.26y, 4.856%</title></circle>
+<circle cx="323.6" cy="228.6" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 9.51y, 4.868%</title></circle>
+<circle cx="330.4" cy="227.5" r="3" fill="#2563eb" fill-opacity="0.55"><title>Note: 9.76y, 4.872%</title></circle>
+<circle cx="343.8" cy="248.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 10.27y, 4.792%</title></circle>
+<circle cx="350.3" cy="246.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 10.51y, 4.801%</title></circle>
+<circle cx="370.4" cy="238.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 11.27y, 4.832%</title></circle>
+<circle cx="376.9" cy="230.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 11.51y, 4.861%</title></circle>
+<circle cx="397.1" cy="214.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 12.27y, 4.920%</title></circle>
+<circle cx="403.6" cy="202.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 12.51y, 4.967%</title></circle>
+<circle cx="410.3" cy="194.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 12.76y, 4.997%</title></circle>
+<circle cx="417.0" cy="188.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 13.01y, 5.018%</title></circle>
+<circle cx="423.7" cy="184.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 13.26y, 5.035%</title></circle>
+<circle cx="430.3" cy="179.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 13.51y, 5.051%</title></circle>
+<circle cx="430.3" cy="162.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 13.51y, 5.116%</title></circle>
+<circle cx="437.0" cy="174.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 13.76y, 5.071%</title></circle>
+<circle cx="437.0" cy="157.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 13.76y, 5.133%</title></circle>
+<circle cx="443.7" cy="171.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.02y, 5.083%</title></circle>
+<circle cx="443.7" cy="153.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.02y, 5.148%</title></circle>
+<circle cx="450.5" cy="166.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.27y, 5.101%</title></circle>
+<circle cx="450.5" cy="153.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.27y, 5.151%</title></circle>
+<circle cx="456.9" cy="162.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.51y, 5.116%</title></circle>
+<circle cx="456.9" cy="148.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.51y, 5.167%</title></circle>
+<circle cx="463.7" cy="157.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.76y, 5.135%</title></circle>
+<circle cx="463.7" cy="143.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 14.76y, 5.187%</title></circle>
+<circle cx="470.4" cy="147.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.01y, 5.172%</title></circle>
+<circle cx="470.4" cy="139.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.01y, 5.203%</title></circle>
+<circle cx="477.1" cy="141.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.27y, 5.194%</title></circle>
+<circle cx="477.1" cy="138.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.27y, 5.206%</title></circle>
+<circle cx="483.6" cy="138.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.51y, 5.206%</title></circle>
+<circle cx="483.6" cy="139.0" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.51y, 5.204%</title></circle>
+<circle cx="490.3" cy="132.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.76y, 5.230%</title></circle>
+<circle cx="490.3" cy="135.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 15.76y, 5.216%</title></circle>
+<circle cx="497.0" cy="127.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.01y, 5.245%</title></circle>
+<circle cx="497.0" cy="134.0" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.01y, 5.222%</title></circle>
+<circle cx="503.7" cy="125.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.27y, 5.254%</title></circle>
+<circle cx="503.7" cy="130.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.27y, 5.236%</title></circle>
+<circle cx="510.2" cy="123.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.51y, 5.262%</title></circle>
+<circle cx="510.2" cy="127.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.51y, 5.247%</title></circle>
+<circle cx="517.0" cy="122.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.76y, 5.265%</title></circle>
+<circle cx="517.0" cy="127.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 16.76y, 5.247%</title></circle>
+<circle cx="523.7" cy="121.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.01y, 5.270%</title></circle>
+<circle cx="523.7" cy="127.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.01y, 5.245%</title></circle>
+<circle cx="530.4" cy="118.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.26y, 5.282%</title></circle>
+<circle cx="530.4" cy="123.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.26y, 5.263%</title></circle>
+<circle cx="537.0" cy="116.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.51y, 5.289%</title></circle>
+<circle cx="537.0" cy="122.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.51y, 5.267%</title></circle>
+<circle cx="543.7" cy="112.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.76y, 5.304%</title></circle>
+<circle cx="543.7" cy="117.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 17.76y, 5.283%</title></circle>
+<circle cx="550.4" cy="109.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.02y, 5.315%</title></circle>
+<circle cx="550.4" cy="118.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.02y, 5.281%</title></circle>
+<circle cx="557.1" cy="104.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.27y, 5.333%</title></circle>
+<circle cx="557.1" cy="117.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.27y, 5.284%</title></circle>
+<circle cx="563.6" cy="106.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.51y, 5.325%</title></circle>
+<circle cx="563.6" cy="118.0" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.51y, 5.283%</title></circle>
+<circle cx="570.3" cy="105.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.76y, 5.331%</title></circle>
+<circle cx="570.3" cy="115.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 18.76y, 5.293%</title></circle>
+<circle cx="577.0" cy="105.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.01y, 5.329%</title></circle>
+<circle cx="577.0" cy="113.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.01y, 5.300%</title></circle>
+<circle cx="583.8" cy="100.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.27y, 5.349%</title></circle>
+<circle cx="583.8" cy="112.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.27y, 5.303%</title></circle>
+<circle cx="590.3" cy="99.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.51y, 5.352%</title></circle>
+<circle cx="590.3" cy="114.0" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.51y, 5.298%</title></circle>
+<circle cx="597.0" cy="97.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.76y, 5.360%</title></circle>
+<circle cx="597.0" cy="115.0" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 19.76y, 5.294%</title></circle>
+<circle cx="603.7" cy="100.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 20.01y, 5.347%</title></circle>
+<circle cx="610.4" cy="100.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 20.27y, 5.348%</title></circle>
+<circle cx="616.9" cy="100.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 20.51y, 5.348%</title></circle>
+<circle cx="623.6" cy="98.0" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 20.76y, 5.357%</title></circle>
+<circle cx="630.3" cy="97.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 21.01y, 5.358%</title></circle>
+<circle cx="637.1" cy="98.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 21.26y, 5.355%</title></circle>
+<circle cx="643.6" cy="98.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 21.51y, 5.355%</title></circle>
+<circle cx="650.4" cy="97.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 21.76y, 5.358%</title></circle>
+<circle cx="657.1" cy="99.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 22.02y, 5.350%</title></circle>
+<circle cx="663.8" cy="97.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 22.27y, 5.360%</title></circle>
+<circle cx="670.3" cy="97.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 22.51y, 5.358%</title></circle>
+<circle cx="677.0" cy="93.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 22.76y, 5.374%</title></circle>
+<circle cx="683.7" cy="95.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 23.01y, 5.368%</title></circle>
+<circle cx="690.4" cy="92.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 23.27y, 5.377%</title></circle>
+<circle cx="696.9" cy="96.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 23.51y, 5.363%</title></circle>
+<circle cx="703.6" cy="91.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 23.76y, 5.382%</title></circle>
+<circle cx="710.4" cy="92.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 24.01y, 5.379%</title></circle>
+<circle cx="717.1" cy="93.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 24.27y, 5.373%</title></circle>
+<circle cx="723.6" cy="96.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 24.51y, 5.364%</title></circle>
+<circle cx="730.3" cy="95.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 24.76y, 5.368%</title></circle>
+<circle cx="737.0" cy="95.0" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 25.01y, 5.369%</title></circle>
+<circle cx="743.7" cy="97.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 25.26y, 5.360%</title></circle>
+<circle cx="750.3" cy="101.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 25.51y, 5.346%</title></circle>
+<circle cx="757.0" cy="102.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 25.76y, 5.341%</title></circle>
+<circle cx="763.7" cy="106.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 26.02y, 5.324%</title></circle>
+<circle cx="770.5" cy="106.5" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 26.27y, 5.325%</title></circle>
+<circle cx="776.9" cy="107.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 26.51y, 5.322%</title></circle>
+<circle cx="783.7" cy="109.1" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 26.76y, 5.316%</title></circle>
+<circle cx="790.4" cy="112.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 27.01y, 5.304%</title></circle>
+<circle cx="797.1" cy="110.6" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 27.27y, 5.310%</title></circle>
+<circle cx="803.6" cy="113.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 27.51y, 5.300%</title></circle>
+<circle cx="810.3" cy="113.9" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 27.76y, 5.298%</title></circle>
+<circle cx="817.0" cy="114.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 28.01y, 5.297%</title></circle>
+<circle cx="823.7" cy="115.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 28.27y, 5.291%</title></circle>
+<circle cx="830.2" cy="117.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 28.51y, 5.286%</title></circle>
+<circle cx="837.0" cy="117.3" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 28.76y, 5.285%</title></circle>
+<circle cx="843.7" cy="118.4" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 29.01y, 5.281%</title></circle>
+<circle cx="850.4" cy="120.2" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 29.26y, 5.274%</title></circle>
+<circle cx="857.0" cy="121.7" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 29.51y, 5.269%</title></circle>
+<circle cx="863.7" cy="122.8" r="3" fill="#d97706" fill-opacity="0.55"><title>Bond: 29.76y, 5.264%</title></circle>
+<path d="M90.3,359.2 L110.3,319.1 L135.9,301.7 L177.0,284.9 L229.9,264.6 L296.9,240.5 L430.3,174.5 L533.7,119.9 L667.0,97.6 L800.3,112.8" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M83.3,372.4 L85.9,366.0 L88.5,360.0 L91.1,354.4 L93.7,349.1 L96.3,344.2 L98.9,339.6 L101.5,335.3 L104.1,331.2 L106.7,327.5 L109.3,323.9 L111.9,320.6 L114.5,317.6 L117.1,314.7 L119.7,312.0 L122.4,309.5 L125.0,307.2 L127.6,305.0 L130.2,303.0 L132.8,301.1 L135.4,299.3 L138.0,297.7 L140.6,296.2 L143.2,294.8 L145.8,293.4 L148.4,292.2 L151.0,291.0 L153.6,290.0 L156.2,288.9 L158.8,288.0 L161.4,287.1 L164.0,286.2 L166.6,285.4 L169.2,284.7 L171.8,283.9 L174.4,283.2 L177.0,282.6 L179.6,281.9 L182.2,281.3 L184.8,280.7 L187.4,280.1 L190.0,279.5 L192.6,278.9 L195.2,278.4 L197.8,277.8 L200.4,277.2 L203.0,276.7 L205.6,276.1 L208.2,275.5 L210.8,274.9 L213.4,274.4 L216.0,273.8 L218.6,273.1 L221.2,272.5 L223.8,271.9 L226.4,271.2 L229.0,270.6 L231.6,269.9 L234.2,269.2 L236.8,268.5 L239.4,267.7 L242.0,267.0 L244.6,266.2 L247.2,265.4 L249.8,264.6 L252.4,263.8 L255.0,262.9 L257.6,262.0 L260.2,261.1 L262.8,260.2 L265.4,259.3 L268.0,258.3 L270.6,257.4 L273.2,256.4 L275.8,255.3 L278.4,254.3 L281.0,253.2 L283.6,252.2 L286.2,251.1 L288.8,249.9 L291.4,248.8 L294.0,247.6 L296.6,246.5 L299.2,245.3 L301.8,244.1 L304.4,242.8 L307.0,241.6 L309.6,240.3 L312.2,239.1 L314.8,237.8 L317.4,236.5 L320.0,235.1 L322.6,233.8 L325.2,232.5 L327.8,231.1 L330.4,229.7 L333.0,228.3 L335.6,226.9 L338.2,225.5 L340.8,224.1 L343.5,222.7 L346.1,221.2 L348.7,219.8 L351.3,218.3 L353.9,216.9 L356.5,215.4 L359.1,213.9 L361.7,212.4 L364.3,211.0 L366.9,209.5 L369.5,208.0 L372.1,206.5 L374.7,205.0 L377.3,203.4 L379.9,201.9 L382.5,200.4 L385.1,198.9 L387.7,197.4 L390.3,195.9 L392.9,194.3 L395.5,192.8 L398.1,191.3 L400.7,189.8 L403.3,188.3 L405.9,186.7 L408.5,185.2 L411.1,183.7 L413.7,182.2 L416.3,180.7 L418.9,179.2 L421.5,177.7 L424.1,176.2 L426.7,174.7 L429.3,173.3 L431.9,171.8 L434.5,170.3 L437.1,168.9 L439.7,167.4 L442.3,166.0 L444.9,164.5 L447.5,163.1 L450.1,161.7 L452.7,160.3 L455.3,158.8 L457.9,157.5 L460.5,156.1 L463.1,154.7 L465.7,153.3 L468.3,152.0 L470.9,150.6 L473.5,149.3 L476.1,148.0 L478.7,146.7 L481.3,145.4 L483.9,144.1 L486.5,142.8 L489.1,141.5 L491.7,140.3 L494.3,139.1 L496.9,137.8 L499.5,136.6 L502.1,135.4 L504.7,134.2 L507.3,133.1 L509.9,131.9 L512.5,130.8 L515.1,129.7 L517.7,128.5 L520.3,127.5 L522.9,126.4 L525.5,125.3 L528.1,124.3 L530.7,123.2 L533.3,122.2 L535.9,121.2 L538.5,120.2 L541.1,119.2 L543.7,118.3 L546.3,117.4 L548.9,116.4 L551.5,115.5 L554.1,114.6 L556.7,113.8 L559.3,112.9 L561.9,112.1 L564.6,111.2 L567.2,110.4 L569.8,109.7 L572.4,108.9 L575.0,108.1 L577.6,107.4 L580.2,106.7 L582.8,106.0 L585.4,105.3 L588.0,104.6 L590.6,104.0 L593.2,103.4 L595.8,102.7 L598.4,102.1 L601.0,101.6 L603.6,101.0 L606.2,100.5 L608.8,99.9 L611.4,99.4 L614.0,99.0 L616.6,98.5 L619.2,98.0 L621.8,97.6 L624.4,97.2 L627.0,96.8 L629.6,96.4 L632.2,96.0 L634.8,95.7 L637.4,95.4 L640.0,95.1 L642.6,94.8 L645.2,94.5 L647.8,94.2 L650.4,94.0 L653.0,93.8 L655.6,93.6 L658.2,93.4 L660.8,93.2 L663.4,93.1 L666.0,93.0 L668.6,92.9 L671.2,92.8 L673.8,92.7 L676.4,92.6 L679.0,92.6 L681.6,92.6 L684.2,92.6 L686.8,92.6 L689.4,92.6 L692.0,92.7 L694.6,92.7 L697.2,92.8 L699.8,92.9 L702.4,93.0 L705.0,93.2 L707.6,93.3 L710.2,93.5 L712.8,93.7 L715.4,93.9 L718.0,94.1 L720.6,94.3 L723.2,94.6 L725.8,94.9 L728.4,95.1 L731.0,95.5 L733.6,95.8 L736.2,96.1 L738.8,96.5 L741.4,96.8 L744.0,97.2 L746.6,97.6 L749.2,98.1 L751.8,98.5 L754.4,98.9 L757.0,99.4 L759.6,99.9 L762.2,100.4 L764.8,100.9 L767.4,101.4 L770.0,102.0 L772.6,102.6 L775.2,103.1 L777.8,103.7 L780.4,104.3 L783.0,105.0 L785.6,105.6 L788.3,106.3 L790.9,106.9 L793.5,107.6 L796.1,108.3 L798.7,109.0 L801.3,109.8 L803.9,110.5 L806.5,111.3 L809.1,112.1 L811.7,112.8 L814.3,113.7 L816.9,114.5 L819.5,115.3 L822.1,116.2 L824.7,117.0 L827.3,117.9 L829.9,118.8 L832.5,119.7 L835.1,120.6 L837.7,121.5 L840.3,122.5 L842.9,123.4 L845.5,124.4 L848.1,125.4 L850.7,126.4 L853.3,127.4 L855.9,128.4 L858.5,129.5 L861.1,130.5 L863.7,131.6" fill="none" stroke="#111827" stroke-width="2.5"/>
+<circle cx="578" cy="24" r="4" fill="#2563eb"/>
+<text x="590" y="28" fill="#374151">Note</text>
+<circle cx="630" cy="24" r="4" fill="#d97706"/>
+<text x="642" y="28" fill="#374151">Bond</text>
+<line x1="675" x2="689" y1="24" y2="24" stroke="#111827" stroke-width="2"/>
+<text x="694" y="28" fill="#374151">NSS fit</text>
+<line x1="748" x2="762" y1="24" y2="24" stroke="#9ca3af" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="767" y="28" fill="#374151">Bucket median</text>
+</svg>
